@@ -1,0 +1,2 @@
+#logz logz_sigma data_set
+-146.6055397528704  0.11074173259314818  ../outputs/run2/output_multinest.txt

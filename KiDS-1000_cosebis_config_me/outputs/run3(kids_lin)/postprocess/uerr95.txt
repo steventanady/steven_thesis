@@ -1,0 +1,17 @@
+#parameter uerr95 data_set
+cosmological_parameters--omch2  0.2549801125470437  ../../../KiDS-1000_cosebis_config_me/outputs/run3/output_multinest.txt
+cosmological_parameters--ombh2  0.02543796471448126  ../../../KiDS-1000_cosebis_config_me/outputs/run3/output_multinest.txt
+cosmological_parameters--h0  0.7603441395190215  ../../../KiDS-1000_cosebis_config_me/outputs/run3/output_multinest.txt
+cosmological_parameters--n_s  1.0999903275675038  ../../../KiDS-1000_cosebis_config_me/outputs/run3/output_multinest.txt
+cosmological_parameters--s_8_input  0.7897295978121862  ../../../KiDS-1000_cosebis_config_me/outputs/run3/output_multinest.txt
+halo_model_parameters--logt_agn  7.992794026960965  ../../../KiDS-1000_cosebis_config_me/outputs/run3/output_multinest.txt
+intrinsic_alignment_parameters--a  0.7269346651906716  ../../../KiDS-1000_cosebis_config_me/outputs/run3/output_multinest.txt
+nofz_shifts--uncorr_bias_1  1.5328303146207947  ../../../KiDS-1000_cosebis_config_me/outputs/run3/output_multinest.txt
+nofz_shifts--uncorr_bias_2  1.752841808788851  ../../../KiDS-1000_cosebis_config_me/outputs/run3/output_multinest.txt
+nofz_shifts--uncorr_bias_3  -0.08251632280126064  ../../../KiDS-1000_cosebis_config_me/outputs/run3/output_multinest.txt
+nofz_shifts--uncorr_bias_4  0.30319469332930904  ../../../KiDS-1000_cosebis_config_me/outputs/run3/output_multinest.txt
+nofz_shifts--uncorr_bias_5  3.4604015155400183  ../../../KiDS-1000_cosebis_config_me/outputs/run3/output_multinest.txt
+prior  3.191874275695132  ../../../KiDS-1000_cosebis_config_me/outputs/run3/output_multinest.txt
+like  -87.09849139420889  ../../../KiDS-1000_cosebis_config_me/outputs/run3/output_multinest.txt
+post  -85.12376165307747  ../../../KiDS-1000_cosebis_config_me/outputs/run3/output_multinest.txt
+weight  0.0020239718183303335  ../../../KiDS-1000_cosebis_config_me/outputs/run3/output_multinest.txt

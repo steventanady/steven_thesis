@@ -1,0 +1,16 @@
+#parameter maxpost data_set
+cosmological_parameters--h0  0.664882533287435  ../../outputs/run6/output_multinest.txt
+cosmological_parameters--omch2  0.10228753143468097  ../../outputs/run6/output_multinest.txt
+cosmological_parameters--ombh2  0.023764281485559896  ../../outputs/run6/output_multinest.txt
+cosmological_parameters--n_s  0.8873649681820687  ../../outputs/run6/output_multinest.txt
+cosmological_parameters--s_8_input  0.9358811260321289  ../../outputs/run6/output_multinest.txt
+intrinsic_alignment_parameters--a  0.03215458304618579  ../../outputs/run6/output_multinest.txt
+nofz_shifts--uncorr_bias_1  -0.2451261251565029  ../../outputs/run6/output_multinest.txt
+nofz_shifts--uncorr_bias_2  0.2215824443317161  ../../outputs/run6/output_multinest.txt
+nofz_shifts--uncorr_bias_3  -1.5615265566646028  ../../outputs/run6/output_multinest.txt
+nofz_shifts--uncorr_bias_4  -1.253596519719622  ../../outputs/run6/output_multinest.txt
+nofz_shifts--uncorr_bias_5  1.9875383211240207  ../../outputs/run6/output_multinest.txt
+prior  1.867686976935155  ../../outputs/run6/output_multinest.txt
+like  -123.72672063191212  ../../outputs/run6/output_multinest.txt
+post  -121.85903365497695  ../../outputs/run6/output_multinest.txt
+weight  0.0013363117469183557  ../../outputs/run6/output_multinest.txt

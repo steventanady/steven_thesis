@@ -1,0 +1,16 @@
+#parameter lerr95 data_set
+cosmological_parameters--h0  nan  ../outputs/run3/output_multinest.txt
+cosmological_parameters--omch2  nan  ../outputs/run3/output_multinest.txt
+cosmological_parameters--ombh2  nan  ../outputs/run3/output_multinest.txt
+cosmological_parameters--n_s  nan  ../outputs/run3/output_multinest.txt
+cosmological_parameters--s_8_input  nan  ../outputs/run3/output_multinest.txt
+intrinsic_alignment_parameters--a  nan  ../outputs/run3/output_multinest.txt
+nofz_shifts--uncorr_bias_1  nan  ../outputs/run3/output_multinest.txt
+nofz_shifts--uncorr_bias_2  nan  ../outputs/run3/output_multinest.txt
+nofz_shifts--uncorr_bias_3  nan  ../outputs/run3/output_multinest.txt
+nofz_shifts--uncorr_bias_4  nan  ../outputs/run3/output_multinest.txt
+nofz_shifts--uncorr_bias_5  nan  ../outputs/run3/output_multinest.txt
+prior  nan  ../outputs/run3/output_multinest.txt
+like  nan  ../outputs/run3/output_multinest.txt
+post  nan  ../outputs/run3/output_multinest.txt
+weight  nan  ../outputs/run3/output_multinest.txt

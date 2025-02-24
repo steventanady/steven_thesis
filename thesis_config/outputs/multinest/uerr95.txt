@@ -1,0 +1,15 @@
+#parameter uerr95 data_set
+cosmological_parameters--h0  nan  ../outputs/output_multinest.txt
+cosmological_parameters--omega_m  0.0784090684593799  ../outputs/output_multinest.txt
+cosmological_parameters--n_s  1.0855059127267712  ../outputs/output_multinest.txt
+cosmological_parameters--s_8_input  1.1943614077233602  ../outputs/output_multinest.txt
+intrinsic_alignment_parameters--a  3.8732606547628943  ../outputs/output_multinest.txt
+nofz_shifts--uncorr_bias_1  3.438136640913741  ../outputs/output_multinest.txt
+nofz_shifts--uncorr_bias_2  4.243942727306802  ../outputs/output_multinest.txt
+nofz_shifts--uncorr_bias_3  -0.46886303501282134  ../outputs/output_multinest.txt
+nofz_shifts--uncorr_bias_4  4.718727811066086  ../outputs/output_multinest.txt
+nofz_shifts--uncorr_bias_5  4.977365136146545  ../outputs/output_multinest.txt
+prior  nan  ../outputs/output_multinest.txt
+like  -138.20182949596378  ../outputs/output_multinest.txt
+post  -147.76421394595135  ../outputs/output_multinest.txt
+weight  nan  ../outputs/output_multinest.txt

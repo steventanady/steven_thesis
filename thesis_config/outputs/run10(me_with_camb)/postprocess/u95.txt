@@ -1,0 +1,17 @@
+#parameter u95 data_set
+cosmological_parameters--h0  0.7639769476885846  ../../outputs/run10/output_multinest.txt
+cosmological_parameters--omch2  0.25378704382816464  ../../outputs/run10/output_multinest.txt
+cosmological_parameters--ombh2  0.02520134390624621  ../../outputs/run10/output_multinest.txt
+cosmological_parameters--n_s  1.0988507130492184  ../../outputs/run10/output_multinest.txt
+cosmological_parameters--s_8_input  0.7904923637831253  ../../outputs/run10/output_multinest.txt
+intrinsic_alignment_parameters--a  0.730656027432156  ../../outputs/run10/output_multinest.txt
+nofz_shifts--uncorr_bias_1  1.3631871049236155  ../../outputs/run10/output_multinest.txt
+nofz_shifts--uncorr_bias_2  1.5476953769640018  ../../outputs/run10/output_multinest.txt
+nofz_shifts--uncorr_bias_3  -0.33788127745597135  ../../outputs/run10/output_multinest.txt
+nofz_shifts--uncorr_bias_4  0.08369363747014669  ../../outputs/run10/output_multinest.txt
+nofz_shifts--uncorr_bias_5  3.5325612556703136  ../../outputs/run10/output_multinest.txt
+halo_model_parameters--logt_agn  7.977891039747324  ../../outputs/run10/output_multinest.txt
+prior  2.7444330225964118  ../../outputs/run10/output_multinest.txt
+like  -87.40139846337384  ../../outputs/run10/output_multinest.txt
+post  -86.12866814881265  ../../outputs/run10/output_multinest.txt
+weight  0.02117566860945545  ../../outputs/run10/output_multinest.txt

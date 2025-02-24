@@ -1,0 +1,12 @@
+#cosmological_parameters--h0 cosmological_parameters--omch2 cosmological_parameters--ombh2 cosmological_parameters--n_s cosmological_parameters--s_8_input intrinsic_alignment_parameters--a nofz_shifts--uncorr_bias_1 nofz_shifts--uncorr_bias_2 nofz_shifts--uncorr_bias_3 nofz_shifts--uncorr_bias_4 nofz_shifts--uncorr_bias_5
+inf  inf  inf  inf  -inf  inf  inf  -inf  inf  -inf  -inf
+inf  inf  inf  inf  -inf  inf  inf  -inf  inf  -inf  -inf
+inf  inf  inf  inf  -inf  inf  inf  -inf  inf  -inf  -inf
+inf  inf  inf  inf  -inf  inf  inf  -inf  inf  -inf  -inf
+-inf  -inf  -inf  -inf  inf  -inf  -inf  inf  -inf  inf  inf
+inf  inf  inf  inf  -inf  inf  inf  -inf  inf  -inf  -inf
+inf  inf  inf  inf  -inf  inf  inf  -inf  inf  -inf  -inf
+-inf  -inf  -inf  -inf  inf  -inf  -inf  inf  -inf  inf  inf
+inf  inf  inf  inf  -inf  inf  inf  -inf  inf  -inf  -inf
+-inf  -inf  -inf  -inf  inf  -inf  -inf  inf  -inf  inf  inf
+-inf  -inf  -inf  -inf  inf  -inf  -inf  inf  -inf  inf  inf

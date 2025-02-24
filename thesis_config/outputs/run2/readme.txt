@@ -1,0 +1,1 @@
+omega_m is used in the values.ini file, along with omch2 and ombh2, while not having any relationship.
