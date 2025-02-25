@@ -1,0 +1,2 @@
+#logz logz_sigma data_set
+-108.50029525067677  0.2629822169963252  ../../../KiDS-1000_cosebis_config_me/outputs/run7_testing/output_multinest.txt
