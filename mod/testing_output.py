@@ -15,8 +15,8 @@ def execute (block, config) :
     diff_frac = diff/data
     diff_frac2 = diff/theory
     output = np.column_stack((data,theory,diff,diff_frac,diff_frac2))
-    np.savetxt("cov_theta60.txt", cov)
-    np.savetxt("data-theory(kids_nl_theta60).txt",output, header = "data theory diff diff_frac diff_frac2")
+    np.savetxt("cov_theta_test.txt", cov)
+    np.savetxt("data-theory_test.txt",output, header = "data theory diff diff_frac diff_frac2")
 
     # Generate output for power spectrum
     # pm_lin = block["matter_power_lin","p_k"]
