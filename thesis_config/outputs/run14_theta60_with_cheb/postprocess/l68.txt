@@ -1,0 +1,15 @@
+#parameter l68 data_set
+intrinsic_alignment_parameters--a  0.3345296382904053  ../../outputs/run14_theta60_with_cheb/output_multinest.txt
+halo_model_parameters--logt_agn  0.3001708388328552  ../../outputs/run14_theta60_with_cheb/output_multinest.txt
+nofz_shifts--uncorr_bias_1  0.33628255128860474  ../../outputs/run14_theta60_with_cheb/output_multinest.txt
+nofz_shifts--uncorr_bias_2  0.3253803497307218  ../../outputs/run14_theta60_with_cheb/output_multinest.txt
+nofz_shifts--uncorr_bias_3  0.3090464472770691  ../../outputs/run14_theta60_with_cheb/output_multinest.txt
+nofz_shifts--uncorr_bias_4  0.33874958753585815  ../../outputs/run14_theta60_with_cheb/output_multinest.txt
+nofz_shifts--uncorr_bias_5  0.34449005126953125  ../../outputs/run14_theta60_with_cheb/output_multinest.txt
+chebyshev_coefficients--c1  0.2521604895591736  ../../outputs/run14_theta60_with_cheb/output_multinest.txt
+chebyshev_coefficients--c2  0.3070944547653198  ../../outputs/run14_theta60_with_cheb/output_multinest.txt
+chebyshev_coefficients--c3  0.3124927282333374  ../../outputs/run14_theta60_with_cheb/output_multinest.txt
+prior  -17.926261349552117  ../../outputs/run14_theta60_with_cheb/output_multinest.txt
+like  4e-323  ../../outputs/run14_theta60_with_cheb/output_multinest.txt
+post  -81.24486475020575  ../../outputs/run14_theta60_with_cheb/output_multinest.txt
+weight  0.002000000000000002  ../../outputs/run14_theta60_with_cheb/output_multinest.txt

@@ -1,0 +1,9 @@
+#parameter lerr68 data_set
+chebyshev_coefficients--c0  1.081488209059262  ../../outputs/run23_4_coefs_debugged/output_multinest.txt
+chebyshev_coefficients--c1  -0.6500248480004394  ../../outputs/run23_4_coefs_debugged/output_multinest.txt
+chebyshev_coefficients--c2  0.14924177519122428  ../../outputs/run23_4_coefs_debugged/output_multinest.txt
+chebyshev_coefficients--c3  -0.06671474940648245  ../../outputs/run23_4_coefs_debugged/output_multinest.txt
+prior  nan  ../../outputs/run23_4_coefs_debugged/output_multinest.txt
+like  -49.051376116928346  ../../outputs/run23_4_coefs_debugged/output_multinest.txt
+post  -40.32104849045189  ../../outputs/run23_4_coefs_debugged/output_multinest.txt
+weight  0.0023137203245320475  ../../outputs/run23_4_coefs_debugged/output_multinest.txt

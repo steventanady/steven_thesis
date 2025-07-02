@@ -1,0 +1,9 @@
+#parameter maxpost data_set
+chebyshev_coefficients--c0  1.4817219178730165  ../../outputs/run21_theta60_with_invcheb/output_multinest.txt
+chebyshev_coefficients--c1  -0.6302868332462896  ../../outputs/run21_theta60_with_invcheb/output_multinest.txt
+chebyshev_coefficients--c2  0.8531801255065599  ../../outputs/run21_theta60_with_invcheb/output_multinest.txt
+chebyshev_coefficients--c3  -0.6523325332319005  ../../outputs/run21_theta60_with_invcheb/output_multinest.txt
+prior  -4.394449154672439  ../../outputs/run21_theta60_with_invcheb/output_multinest.txt
+like  -46.92248290675937  ../../outputs/run21_theta60_with_invcheb/output_multinest.txt
+post  -51.31693206143181  ../../outputs/run21_theta60_with_invcheb/output_multinest.txt
+weight  9.865487176665541e-05  ../../outputs/run21_theta60_with_invcheb/output_multinest.txt

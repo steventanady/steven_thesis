@@ -1,0 +1,7 @@
+#parameter medians sigma data_set
+chebyshev_coefficients--c0  1.2087349292458962  0.12170017862735019  ../../outputs/run22_only_2_coefs/output_multinest.txt
+chebyshev_coefficients--c1  -0.5845132015451724  0.054659451289944615  ../../outputs/run22_only_2_coefs/output_multinest.txt
+prior  1.8325814637483104  0.0  ../../outputs/run22_only_2_coefs/output_multinest.txt
+like  -48.79025771470162  0.8340917252415263  ../../outputs/run22_only_2_coefs/output_multinest.txt
+post  -46.957676250953305  0.8340917252415263  ../../outputs/run22_only_2_coefs/output_multinest.txt
+weight  0.003369486542925078  0.0013524252502103286  ../../outputs/run22_only_2_coefs/output_multinest.txt

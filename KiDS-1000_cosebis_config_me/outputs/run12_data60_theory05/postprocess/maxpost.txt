@@ -1,0 +1,17 @@
+#parameter maxpost data_set
+cosmological_parameters--omch2  0.05352704368483625  ../../../KiDS-1000_cosebis_config_me/outputs/run12_data60_theory05/output_multinest.txt
+cosmological_parameters--ombh2  0.021216412182945926  ../../../KiDS-1000_cosebis_config_me/outputs/run12_data60_theory05/output_multinest.txt
+cosmological_parameters--h0  0.7162377924267069  ../../../KiDS-1000_cosebis_config_me/outputs/run12_data60_theory05/output_multinest.txt
+cosmological_parameters--n_s  1.0994585760465738  ../../../KiDS-1000_cosebis_config_me/outputs/run12_data60_theory05/output_multinest.txt
+cosmological_parameters--s_8_input  0.6835036613636494  ../../../KiDS-1000_cosebis_config_me/outputs/run12_data60_theory05/output_multinest.txt
+halo_model_parameters--logt_agn  7.755114573945726  ../../../KiDS-1000_cosebis_config_me/outputs/run12_data60_theory05/output_multinest.txt
+intrinsic_alignment_parameters--a  -2.9839554058352995  ../../../KiDS-1000_cosebis_config_me/outputs/run12_data60_theory05/output_multinest.txt
+nofz_shifts--uncorr_bias_1  -0.39741844006698557  ../../../KiDS-1000_cosebis_config_me/outputs/run12_data60_theory05/output_multinest.txt
+nofz_shifts--uncorr_bias_2  -0.11559875733723851  ../../../KiDS-1000_cosebis_config_me/outputs/run12_data60_theory05/output_multinest.txt
+nofz_shifts--uncorr_bias_3  -1.2779007092342451  ../../../KiDS-1000_cosebis_config_me/outputs/run12_data60_theory05/output_multinest.txt
+nofz_shifts--uncorr_bias_4  -1.1067155452872157  ../../../KiDS-1000_cosebis_config_me/outputs/run12_data60_theory05/output_multinest.txt
+nofz_shifts--uncorr_bias_5  1.2984379993679342  ../../../KiDS-1000_cosebis_config_me/outputs/run12_data60_theory05/output_multinest.txt
+prior  3.1307061232996123  ../../../KiDS-1000_cosebis_config_me/outputs/run12_data60_theory05/output_multinest.txt
+like  -9.619217363234972  ../../../KiDS-1000_cosebis_config_me/outputs/run12_data60_theory05/output_multinest.txt
+post  -6.4885112399353595  ../../../KiDS-1000_cosebis_config_me/outputs/run12_data60_theory05/output_multinest.txt
+weight  0.0003274935148909366  ../../../KiDS-1000_cosebis_config_me/outputs/run12_data60_theory05/output_multinest.txt

@@ -1,0 +1,9 @@
+#parameter maxpost data_set
+cosmological_parameters--omch2  0.2307611653199588  ../../../KiDS-1000_cosebis_config_me/outputs/run14_with_constraints/output_multinest.txt
+cosmological_parameters--ombh2  0.020944305532082885  ../../../KiDS-1000_cosebis_config_me/outputs/run14_with_constraints/output_multinest.txt
+cosmological_parameters--h0  0.815995784431945  ../../../KiDS-1000_cosebis_config_me/outputs/run14_with_constraints/output_multinest.txt
+cosmological_parameters--n_s  1.0999192697492923  ../../../KiDS-1000_cosebis_config_me/outputs/run14_with_constraints/output_multinest.txt
+prior  9.61335249112328  ../../../KiDS-1000_cosebis_config_me/outputs/run14_with_constraints/output_multinest.txt
+like  -101.57631731901155  ../../../KiDS-1000_cosebis_config_me/outputs/run14_with_constraints/output_multinest.txt
+post  -91.96296482788827  ../../../KiDS-1000_cosebis_config_me/outputs/run14_with_constraints/output_multinest.txt
+weight  9.903838457345419e-05  ../../../KiDS-1000_cosebis_config_me/outputs/run14_with_constraints/output_multinest.txt

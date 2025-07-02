@@ -1,0 +1,10 @@
+#parameter peak1d data_set
+cosmological_parameters--omch2  0.3997393300986509  ../../../KiDS-1000_cosebis_config_me/outputs/run15_broadened_boundaries/output_multinest.txt
+cosmological_parameters--ombh2  0.04038377926917397  ../../../KiDS-1000_cosebis_config_me/outputs/run15_broadened_boundaries/output_multinest.txt
+cosmological_parameters--h0  0.7203768418350415  ../../../KiDS-1000_cosebis_config_me/outputs/run15_broadened_boundaries/output_multinest.txt
+cosmological_parameters--n_s  1.0032020412133487  ../../../KiDS-1000_cosebis_config_me/outputs/run15_broadened_boundaries/output_multinest.txt
+cosmological_parameters--s_8_input  0.40213966302737925  ../../../KiDS-1000_cosebis_config_me/outputs/run15_broadened_boundaries/output_multinest.txt
+prior  nan  ../../../KiDS-1000_cosebis_config_me/outputs/run15_broadened_boundaries/output_multinest.txt
+like  -99.92175681047735  ../../../KiDS-1000_cosebis_config_me/outputs/run15_broadened_boundaries/output_multinest.txt
+post  -92.76770582547589  ../../../KiDS-1000_cosebis_config_me/outputs/run15_broadened_boundaries/output_multinest.txt
+weight  0.005480988483974438  ../../../KiDS-1000_cosebis_config_me/outputs/run15_broadened_boundaries/output_multinest.txt

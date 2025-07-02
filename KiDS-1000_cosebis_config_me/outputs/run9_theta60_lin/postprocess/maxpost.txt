@@ -1,0 +1,17 @@
+#parameter maxpost data_set
+cosmological_parameters--omch2  0.059383196889395196  ../../../KiDS-1000_cosebis_config_me/outputs/run9_theta60_lin/output_multinest.txt
+cosmological_parameters--ombh2  0.021539267340642106  ../../../KiDS-1000_cosebis_config_me/outputs/run9_theta60_lin/output_multinest.txt
+cosmological_parameters--h0  0.817747655328539  ../../../KiDS-1000_cosebis_config_me/outputs/run9_theta60_lin/output_multinest.txt
+cosmological_parameters--n_s  0.89003407218285  ../../../KiDS-1000_cosebis_config_me/outputs/run9_theta60_lin/output_multinest.txt
+cosmological_parameters--s_8_input  0.6969522616144668  ../../../KiDS-1000_cosebis_config_me/outputs/run9_theta60_lin/output_multinest.txt
+halo_model_parameters--logt_agn  7.871917192784017  ../../../KiDS-1000_cosebis_config_me/outputs/run9_theta60_lin/output_multinest.txt
+intrinsic_alignment_parameters--a  -2.1770332246739375  ../../../KiDS-1000_cosebis_config_me/outputs/run9_theta60_lin/output_multinest.txt
+nofz_shifts--uncorr_bias_1  -0.47303425551376677  ../../../KiDS-1000_cosebis_config_me/outputs/run9_theta60_lin/output_multinest.txt
+nofz_shifts--uncorr_bias_2  -0.12159016701275499  ../../../KiDS-1000_cosebis_config_me/outputs/run9_theta60_lin/output_multinest.txt
+nofz_shifts--uncorr_bias_3  -1.2742522320911573  ../../../KiDS-1000_cosebis_config_me/outputs/run9_theta60_lin/output_multinest.txt
+nofz_shifts--uncorr_bias_4  -1.3305222923293059  ../../../KiDS-1000_cosebis_config_me/outputs/run9_theta60_lin/output_multinest.txt
+nofz_shifts--uncorr_bias_5  1.4710779862514303  ../../../KiDS-1000_cosebis_config_me/outputs/run9_theta60_lin/output_multinest.txt
+prior  3.1175762091713  ../../../KiDS-1000_cosebis_config_me/outputs/run9_theta60_lin/output_multinest.txt
+like  -20.534875310959094  ../../../KiDS-1000_cosebis_config_me/outputs/run9_theta60_lin/output_multinest.txt
+post  -17.417299101787794  ../../../KiDS-1000_cosebis_config_me/outputs/run9_theta60_lin/output_multinest.txt
+weight  8.090616849793009e-05  ../../../KiDS-1000_cosebis_config_me/outputs/run9_theta60_lin/output_multinest.txt

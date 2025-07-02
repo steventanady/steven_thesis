@@ -1,0 +1,7 @@
+#parameter uerr95 data_set
+chebyshev_coefficients--c0  1.3742027610271084  ../../outputs/run22_only_2_coefs/output_multinest.txt
+chebyshev_coefficients--c1  -0.4820281219482422  ../../outputs/run22_only_2_coefs/output_multinest.txt
+prior  nan  ../../outputs/run22_only_2_coefs/output_multinest.txt
+like  -48.454941953993085  ../../outputs/run22_only_2_coefs/output_multinest.txt
+post  -46.62236049024477  ../../outputs/run22_only_2_coefs/output_multinest.txt
+weight  0.004686449869522147  ../../outputs/run22_only_2_coefs/output_multinest.txt

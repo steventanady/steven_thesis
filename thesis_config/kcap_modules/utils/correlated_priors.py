@@ -15,6 +15,10 @@ def setup(options):
     return input_parameters, output_parameters, L
 
 def execute(block, config):
+    # Skip if expansion function is not positive-definite
+    # if not block["distances", "pos_expf"] :
+    #     return 0
+
     input_parameters, output_parameters, L = config
     
     p = []

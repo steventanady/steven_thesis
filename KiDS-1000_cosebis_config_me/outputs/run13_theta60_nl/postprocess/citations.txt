@@ -1,0 +1,8 @@
+#You should cite these papers in any publication based on this pipeline.
+#../../../KiDS-1000_cosebis_config_me/outputs/run13_theta60_nl/output_multinest.txt
+https://arxiv.org/abs/1601.00115
+http://arxiv.org/abs/1201.3654
+https://arxiv.org/abs/1201.2669
+New J Phys 9 12 444 (2007)
+MNRAS 424 3 1647 (2012)
+http://arxiv.org/abs/astro-ph/9911177

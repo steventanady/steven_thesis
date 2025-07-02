@@ -1,0 +1,9 @@
+#parameter u95 data_set
+chebyshev_coefficients--c0  1.4684067534883405  ../../outputs/run21_theta60_with_invcheb/output_multinest.txt
+chebyshev_coefficients--c1  0.6398219561619902  ../../outputs/run21_theta60_with_invcheb/output_multinest.txt
+chebyshev_coefficients--c2  0.5399364384442896  ../../outputs/run21_theta60_with_invcheb/output_multinest.txt
+chebyshev_coefficients--c3  0.5252896277467317  ../../outputs/run21_theta60_with_invcheb/output_multinest.txt
+prior  -4.394449154672439  ../../outputs/run21_theta60_with_invcheb/output_multinest.txt
+like  -47.62972095568305  ../../outputs/run21_theta60_with_invcheb/output_multinest.txt
+post  -52.024170110355485  ../../outputs/run21_theta60_with_invcheb/output_multinest.txt
+weight  0.0039605627844646225  ../../outputs/run21_theta60_with_invcheb/output_multinest.txt

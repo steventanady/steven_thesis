@@ -1,0 +1,10 @@
+#parameter u95 data_set
+cosmological_parameters--omch2  0.24760736650593823  ../../../KiDS-1000_cosebis_config_me/outputs/run16_ntheta_4000/output_multinest.txt
+cosmological_parameters--ombh2  0.025735774703087543  ../../../KiDS-1000_cosebis_config_me/outputs/run16_ntheta_4000/output_multinest.txt
+cosmological_parameters--h0  0.8105119036873979  ../../../KiDS-1000_cosebis_config_me/outputs/run16_ntheta_4000/output_multinest.txt
+cosmological_parameters--n_s  1.0884387159606044  ../../../KiDS-1000_cosebis_config_me/outputs/run16_ntheta_4000/output_multinest.txt
+cosmological_parameters--s_8_input  0.644996410190679  ../../../KiDS-1000_cosebis_config_me/outputs/run16_ntheta_4000/output_multinest.txt
+prior  9.431030934329325  ../../../KiDS-1000_cosebis_config_me/outputs/run16_ntheta_4000/output_multinest.txt
+like  -99.80543319218393  ../../../KiDS-1000_cosebis_config_me/outputs/run16_ntheta_4000/output_multinest.txt
+post  -90.3744022578546  ../../../KiDS-1000_cosebis_config_me/outputs/run16_ntheta_4000/output_multinest.txt
+weight  0.00620827591870366  ../../../KiDS-1000_cosebis_config_me/outputs/run16_ntheta_4000/output_multinest.txt

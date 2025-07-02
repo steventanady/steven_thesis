@@ -1,0 +1,9 @@
+#parameter lerr68 data_set
+cosmological_parameters--omch2  0.16058427523228833  ../../../KiDS-1000_cosebis_config_me/outputs/run14_with_constraints/output_multinest.txt
+cosmological_parameters--ombh2  0.019520256283390307  ../../../KiDS-1000_cosebis_config_me/outputs/run14_with_constraints/output_multinest.txt
+cosmological_parameters--h0  0.724865534965913  ../../../KiDS-1000_cosebis_config_me/outputs/run14_with_constraints/output_multinest.txt
+cosmological_parameters--n_s  1.0039043890240695  ../../../KiDS-1000_cosebis_config_me/outputs/run14_with_constraints/output_multinest.txt
+prior  nan  ../../../KiDS-1000_cosebis_config_me/outputs/run14_with_constraints/output_multinest.txt
+like  -103.58389983044644  ../../../KiDS-1000_cosebis_config_me/outputs/run14_with_constraints/output_multinest.txt
+post  -93.97054733932316  ../../../KiDS-1000_cosebis_config_me/outputs/run14_with_constraints/output_multinest.txt
+weight  0.0020159868359175726  ../../../KiDS-1000_cosebis_config_me/outputs/run14_with_constraints/output_multinest.txt

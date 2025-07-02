@@ -115,6 +115,10 @@ def setup(options):
     return config
 
 def execute(block, config):
+    # Skip if expansion function is not positive-definite
+    # if not block["distances", "pos_expf"] :
+    #     return 0
+
     print('Gathering theory outputs to make a vector')
     
     ## Save data and cov in the data block

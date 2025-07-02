@@ -1,0 +1,9 @@
+#parameter uerr95 data_set
+cosmological_parameters--omch2  0.25496555256843567  ../../../KiDS-1000_cosebis_config_me/outputs/run14_with_constraints/output_multinest.txt
+cosmological_parameters--ombh2  0.025493745383429457  ../../../KiDS-1000_cosebis_config_me/outputs/run14_with_constraints/output_multinest.txt
+cosmological_parameters--h0  0.8197675974165931  ../../../KiDS-1000_cosebis_config_me/outputs/run14_with_constraints/output_multinest.txt
+cosmological_parameters--n_s  1.0999942057497973  ../../../KiDS-1000_cosebis_config_me/outputs/run14_with_constraints/output_multinest.txt
+prior  nan  ../../../KiDS-1000_cosebis_config_me/outputs/run14_with_constraints/output_multinest.txt
+like  -101.57631731901155  ../../../KiDS-1000_cosebis_config_me/outputs/run14_with_constraints/output_multinest.txt
+post  -91.96296482788827  ../../../KiDS-1000_cosebis_config_me/outputs/run14_with_constraints/output_multinest.txt
+weight  0.0035239293987112236  ../../../KiDS-1000_cosebis_config_me/outputs/run14_with_constraints/output_multinest.txt

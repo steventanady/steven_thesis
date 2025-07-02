@@ -1,0 +1,383 @@
+Setting up pipeline from parameter file tester.ini
+--------------------------------------------------
+
+Setting up module sample_S8
+----------------------------
+
+Setting up module sigma8toAs
+-----------------------------
+
+Setting up module distance_mod
+-------------------------------
+**** WARNING: Parameter 'z' in the [distance_mod] section never used!
+
+
+Setting up module matter_power
+-------------------------------
+**** WARNING: Parameter 'kmax' in the [matter_power] section never used!
+
+
+Setting up module extrapolate_power
+------------------------------------
+
+Setting up module load_nz_fits
+-------------------------------
+Loading number density data from /home/steven/thesis/thesis_config/inputs//test6_cosebis_KIDS1000_BlindC_with_m_bias_V1.0.0A_ugriZYJHKs_photoz_SG_mask_LF_svn_309c_2Dbins_v2_goldclasses_Flag_SOM_Fid.fits:
+    Looking at FITS extension NZ_SOURCE:
+        Found 5 bins
+        Putting n(0) = 0 at the start of the n(z)
+
+Setting up module correlated_dz_priors
+---------------------------------------
+
+Setting up module source_photoz_bias
+-------------------------------------
+**** WARNING: Parameter 'output_deltaz' in the [source_photoz_bias] section never used!
+
+**** WARNING: Parameter 'output_section_name' in the [source_photoz_bias] section never used!
+
+
+Setting up module linear_alignment
+-----------------------------------
+
+Setting up module projection
+-----------------------------
+USING LINEAR MATTER POWER SPECTRUM
+Calculating Limber: Kernel 1 = ('F', 'source'), Kernel 2 = ('F', 'source'), P_3D = MatterPower3D, section = matter_power_lin --> Output: shear_cl
+Will project these spectra into 2D:
+    -  shear_cl
+
+Setting up module cosebis
+--------------------------
+
+
+********* COSEBIs interface setup *********
+
+You did not define the input_section_name,setting to the default: shear_cl
+The output_section_name:cosebis
+COSEBIs range theta_min=60
+COSEBIs range theta_max=300
+Calculating COSEBI nodes up to n_max=5
+The Wn_Output_FolderName:/home/steven/WnLog/
+You did not define the Wn_file_name, setting to the default: WnLog
+As you did not set the table_precision, I will set this to the default: 10
+As you did not set the number_of_Wn_l_bins, I will set this to the default: 100000
+The Roots_n_Norms_FolderName:/home/steven/cosmosis-standard-library/shear/cosebis//TLogsRootsAndNorms/
+COSEBIs initialized
+Setting the En parameters in COSEBIs
+nMaximum=5
+In radians: theta_min=0.0174533
+In radians: theta_max=0.0872665
+Setting Wn now:
+reading T1  roots	reading T1  normalization
+reading T2  roots	reading T2  normalization
+reading T3  roots	reading T3  normalization
+reading T4  roots	reading T4  normalization
+reading T5  roots	reading T5  normalization
+**** WARNING: Parameter 'tn_output_foldername' in the [cosebis] section never used!
+
+
+Setting up module scale_cuts
+-----------------------------
+Masking 0 values in En because they had ell or theta outside (0.5,5.5)
+  Did scale cuts to data & cov
+
+Setting up module likelihood
+-----------------------------
+Setup all pipeline modules
+
+Module timing:
+sample_S8 0.021134
+sigma8toAs 0.021870
+distance_mod 0.021088
+matter_power 0.033211
+extrapolate_power 0.023370
+load_nz_fits 0.024744
+correlated_dz_priors 0.021693
+source_photoz_bias 0.020755
+linear_alignment 0.021532
+projection 0.022340
+cosebis 0.646537
+scale_cuts 0.030812
+likelihood 0.020650
+
+Parameter Priors
+----------------
+cosmological_parameters--omch2      ~ delta(0.1157)
+cosmological_parameters--ombh2      ~ delta(0.0225)
+cosmological_parameters--h0         ~ delta(0.6898)
+cosmological_parameters--n_s        ~ delta(0.969)
+cosmological_parameters--s_8_input  ~ delta(0.8128)
+cosmological_parameters--omega_k    ~ delta(0.0)
+cosmological_parameters--w          ~ delta(-1.0)
+cosmological_parameters--wa         ~ delta(0.0)
+intrinsic_alignment_parameters--a   ~ U(-6.0, 6.0)
+halo_model_parameters--logt_agn     ~ U(7.6, 8.0)
+nofz_shifts--uncorr_bias_1          ~ N(0.0, 1.0 ** 2)   [-5.0 < x < 5.0]
+nofz_shifts--uncorr_bias_2          ~ N(-0.181, 1.0 ** 2)   [-5.0 < x < 5.0]
+nofz_shifts--uncorr_bias_3          ~ N(-1.11, 1.0 ** 2)   [-5.0 < x < 5.0]
+nofz_shifts--uncorr_bias_4          ~ N(-1.395, 1.0 ** 2)   [-5.0 < x < 5.0]
+nofz_shifts--uncorr_bias_5          ~ N(1.265, 1.0 ** 2)   [-5.0 < x < 5.0]
+chebyshev_coefficients--c1          ~ U(-10.0, 10.0)
+chebyshev_coefficients--c2          ~ U(-10.0, 10.0)
+chebyshev_coefficients--c3          ~ U(-10.0, 10.0)
+
+Resuming sampling using multinest internal mechanism, so starting a new output chain file.
+****************************************************
+* Running sampler 1/1: multinest
+* Running in serial mode.
+* Saving output -> /home/steven/thesis/thesis_config/outputs/run12(theta60_with_cheb)//output_multinest.txt
+****************************************************
+ MultiNest Warning: no resume file found, starting from scratch
+ *****************************************************
+ MultiNest v3.10
+ Copyright Farhan Feroz & Mike Hobson
+ Release Jul 2015
+
+ no. of live points =  200
+ dimensionality =   10
+ *****************************************************
+ Starting MultiNest
+ generating live points
+/home/steven/thesis/mod/cosmology_mod.py:103: ODEintWarning: Excess work done on this call (perhaps wrong Dfun type). Run with full_output = 1 to get quantitative information.
+  delta = odeint (self.growth_equation, delta_initial, t)
+sample_S8 took: 0.000 seconds
+sigma8toAs took: 0.203 seconds
+distance_mod took: 0.004 seconds
+matter_power took: 8.603 seconds
+extrapolate_power took: 0.017 seconds
+load_nz_fits took: 0.000 seconds
+correlated_dz_priors took: 0.000 seconds
+source_photoz_bias took: 0.002 seconds
+linear_alignment took: 0.003 seconds
+Exception running likelihood at parameters: [ 1.70439506  7.65299892  1.16567144  1.31590446 -2.4040348  -1.60516143
+  1.77199694  0.23568392 -7.5176537   5.11137724].You should fix this; for now, using zero likelihood.
+Traceback (most recent call last):
+  File "/home/steven/env/lib/python3.12/site-packages/cosmosis/runtime/pipeline.py", line 1218, in run_results
+    like, r.extra, r.block = self.likelihood(p, return_data=True, all_params=all_params)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/steven/env/lib/python3.12/site-packages/cosmosis/runtime/pipeline.py", line 1350, in likelihood
+    data = self.run_parameters(p, all_params=all_params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/steven/env/lib/python3.12/site-packages/cosmosis/runtime/pipeline.py", line 1122, in run_parameters
+    if self.run(data):
+       ^^^^^^^^^^^^^^
+  File "/home/steven/env/lib/python3.12/site-packages/cosmosis/runtime/pipeline.py", line 648, in run
+    status = module.execute(data_package)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/steven/env/lib/python3.12/site-packages/cosmosis/runtime/module.py", line 246, in execute
+    return self.execute_function(data_block, self.data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/steven/cosmosis-standard-library//structure/projection/project_2d.py", line 1813, in execute
+    return config.execute(block)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/steven/cosmosis-standard-library//structure/projection/project_2d.py", line 1748, in execute
+    self.load_distance_splines(block)
+  File "/home/steven/cosmosis-standard-library//structure/projection/project_2d.py", line 1545, in load_distance_splines
+    self.a_of_chi = interp.InterpolatedUnivariateSpline(chi_distance, a_distance)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/steven/env/lib/python3.12/site-packages/scipy/interpolate/_fitpack2.py", line 734, in __init__
+    x, y, w, bbox, self.ext = self.validate_input(x, y, w, bbox, k, None,
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/steven/env/lib/python3.12/site-packages/scipy/interpolate/_fitpack2.py", line 257, in validate_input
+    raise ValueError("x must be increasing if s > 0")
+ValueError: x must be increasing if s > 0
+
+
+Because you have debug=T I will let this kill the chain.
+The input parameters were:array([ 1.70439506,  7.65299892,  1.16567144,  1.31590446, -2.4040348 ,
+       -1.60516143,  1.77199694,  0.23568392, -7.5176537 ,  5.11137724])
+Exception ignored on calling ctypes callback function: <function MultinestSampler.config.<locals>.likelihood at 0x7fb0db54d620>
+Traceback (most recent call last):
+  File "/home/steven/env/lib/python3.12/site-packages/cosmosis/samplers/multinest/multinest_sampler.py", line 169, in likelihood
+    results = self.pipeline.run_results(vector)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/steven/env/lib/python3.12/site-packages/cosmosis/runtime/pipeline.py", line 1218, in run_results
+    like, r.extra, r.block = self.likelihood(p, return_data=True, all_params=all_params)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/steven/env/lib/python3.12/site-packages/cosmosis/runtime/pipeline.py", line 1350, in likelihood
+    data = self.run_parameters(p, all_params=all_params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/steven/env/lib/python3.12/site-packages/cosmosis/runtime/pipeline.py", line 1122, in run_parameters
+    if self.run(data):
+       ^^^^^^^^^^^^^^
+  File "/home/steven/env/lib/python3.12/site-packages/cosmosis/runtime/pipeline.py", line 648, in run
+    status = module.execute(data_package)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/steven/env/lib/python3.12/site-packages/cosmosis/runtime/module.py", line 246, in execute
+    return self.execute_function(data_block, self.data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/steven/cosmosis-standard-library//structure/projection/project_2d.py", line 1813, in execute
+    return config.execute(block)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/steven/cosmosis-standard-library//structure/projection/project_2d.py", line 1748, in execute
+    self.load_distance_splines(block)
+  File "/home/steven/cosmosis-standard-library//structure/projection/project_2d.py", line 1545, in load_distance_splines
+    self.a_of_chi = interp.InterpolatedUnivariateSpline(chi_distance, a_distance)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/steven/env/lib/python3.12/site-packages/scipy/interpolate/_fitpack2.py", line 734, in __init__
+    x, y, w, bbox, self.ext = self.validate_input(x, y, w, bbox, k, None,
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/steven/env/lib/python3.12/site-packages/scipy/interpolate/_fitpack2.py", line 257, in validate_input
+    raise ValueError("x must be increasing if s > 0")
+ValueError: x must be increasing if s > 0
+sample_S8 took: 0.000 seconds
+sigma8toAs took: 0.177 seconds
+distance_mod took: 0.003 seconds
+matter_power took: 5.038 seconds
+extrapolate_power took: 0.017 seconds
+load_nz_fits took: 0.000 seconds
+correlated_dz_priors took: 0.000 seconds
+source_photoz_bias took: 0.001 seconds
+linear_alignment took: 0.002 seconds
+Exception running likelihood at parameters: [-3.39683032  7.7506948  -0.2903498   0.84100453  0.65038843 -2.77673486
+  0.91522401  8.53459358 -8.69111776  8.98545742].You should fix this; for now, using zero likelihood.
+Traceback (most recent call last):
+  File "/home/steven/env/lib/python3.12/site-packages/cosmosis/runtime/pipeline.py", line 1218, in run_results
+    like, r.extra, r.block = self.likelihood(p, return_data=True, all_params=all_params)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/steven/env/lib/python3.12/site-packages/cosmosis/runtime/pipeline.py", line 1350, in likelihood
+    data = self.run_parameters(p, all_params=all_params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/steven/env/lib/python3.12/site-packages/cosmosis/runtime/pipeline.py", line 1122, in run_parameters
+    if self.run(data):
+       ^^^^^^^^^^^^^^
+  File "/home/steven/env/lib/python3.12/site-packages/cosmosis/runtime/pipeline.py", line 648, in run
+    status = module.execute(data_package)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/steven/env/lib/python3.12/site-packages/cosmosis/runtime/module.py", line 246, in execute
+    return self.execute_function(data_block, self.data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/steven/cosmosis-standard-library//structure/projection/project_2d.py", line 1813, in execute
+    return config.execute(block)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/steven/cosmosis-standard-library//structure/projection/project_2d.py", line 1748, in execute
+    self.load_distance_splines(block)
+  File "/home/steven/cosmosis-standard-library//structure/projection/project_2d.py", line 1545, in load_distance_splines
+    self.a_of_chi = interp.InterpolatedUnivariateSpline(chi_distance, a_distance)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/steven/env/lib/python3.12/site-packages/scipy/interpolate/_fitpack2.py", line 734, in __init__
+    x, y, w, bbox, self.ext = self.validate_input(x, y, w, bbox, k, None,
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/steven/env/lib/python3.12/site-packages/scipy/interpolate/_fitpack2.py", line 257, in validate_input
+    raise ValueError("x must be increasing if s > 0")
+ValueError: x must be increasing if s > 0
+
+
+Because you have debug=T I will let this kill the chain.
+The input parameters were:array([-3.39683032,  7.7506948 , -0.2903498 ,  0.84100453,  0.65038843,
+       -2.77673486,  0.91522401,  8.53459358, -8.69111776,  8.98545742])
+Exception ignored on calling ctypes callback function: <function MultinestSampler.config.<locals>.likelihood at 0x7fb0db54d620>
+Traceback (most recent call last):
+  File "/home/steven/env/lib/python3.12/site-packages/cosmosis/samplers/multinest/multinest_sampler.py", line 169, in likelihood
+    results = self.pipeline.run_results(vector)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/steven/env/lib/python3.12/site-packages/cosmosis/runtime/pipeline.py", line 1218, in run_results
+    like, r.extra, r.block = self.likelihood(p, return_data=True, all_params=all_params)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/steven/env/lib/python3.12/site-packages/cosmosis/runtime/pipeline.py", line 1350, in likelihood
+    data = self.run_parameters(p, all_params=all_params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/steven/env/lib/python3.12/site-packages/cosmosis/runtime/pipeline.py", line 1122, in run_parameters
+    if self.run(data):
+       ^^^^^^^^^^^^^^
+  File "/home/steven/env/lib/python3.12/site-packages/cosmosis/runtime/pipeline.py", line 648, in run
+    status = module.execute(data_package)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/steven/env/lib/python3.12/site-packages/cosmosis/runtime/module.py", line 246, in execute
+    return self.execute_function(data_block, self.data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/steven/cosmosis-standard-library//structure/projection/project_2d.py", line 1813, in execute
+    return config.execute(block)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/steven/cosmosis-standard-library//structure/projection/project_2d.py", line 1748, in execute
+    self.load_distance_splines(block)
+  File "/home/steven/cosmosis-standard-library//structure/projection/project_2d.py", line 1545, in load_distance_splines
+    self.a_of_chi = interp.InterpolatedUnivariateSpline(chi_distance, a_distance)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/steven/env/lib/python3.12/site-packages/scipy/interpolate/_fitpack2.py", line 734, in __init__
+    x, y, w, bbox, self.ext = self.validate_input(x, y, w, bbox, k, None,
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/steven/env/lib/python3.12/site-packages/scipy/interpolate/_fitpack2.py", line 257, in validate_input
+    raise ValueError("x must be increasing if s > 0")
+ValueError: x must be increasing if s > 0
+sample_S8 took: 0.000 seconds
+sigma8toAs took: 0.177 seconds
+distance_mod took: 0.003 seconds
+matter_power took: 2.431 seconds
+extrapolate_power took: 0.016 seconds
+load_nz_fits took: 0.000 seconds
+correlated_dz_priors took: 0.000 seconds
+source_photoz_bias took: 0.002 seconds
+linear_alignment took: 0.002 seconds
+Exception running likelihood at parameters: [-3.03451681  7.9596113  -0.26585418 -2.81552623 -0.38193172 -1.74861078
+  1.06845803 -2.83221364  6.55008554  3.50946307].You should fix this; for now, using zero likelihood.
+Traceback (most recent call last):
+  File "/home/steven/env/lib/python3.12/site-packages/cosmosis/runtime/pipeline.py", line 1218, in run_results
+    like, r.extra, r.block = self.likelihood(p, return_data=True, all_params=all_params)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/steven/env/lib/python3.12/site-packages/cosmosis/runtime/pipeline.py", line 1350, in likelihood
+    data = self.run_parameters(p, all_params=all_params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/steven/env/lib/python3.12/site-packages/cosmosis/runtime/pipeline.py", line 1122, in run_parameters
+    if self.run(data):
+       ^^^^^^^^^^^^^^
+  File "/home/steven/env/lib/python3.12/site-packages/cosmosis/runtime/pipeline.py", line 648, in run
+    status = module.execute(data_package)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/steven/env/lib/python3.12/site-packages/cosmosis/runtime/module.py", line 246, in execute
+    return self.execute_function(data_block, self.data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/steven/cosmosis-standard-library//structure/projection/project_2d.py", line 1813, in execute
+    return config.execute(block)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/steven/cosmosis-standard-library//structure/projection/project_2d.py", line 1748, in execute
+    self.load_distance_splines(block)
+  File "/home/steven/cosmosis-standard-library//structure/projection/project_2d.py", line 1545, in load_distance_splines
+    self.a_of_chi = interp.InterpolatedUnivariateSpline(chi_distance, a_distance)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/steven/env/lib/python3.12/site-packages/scipy/interpolate/_fitpack2.py", line 734, in __init__
+    x, y, w, bbox, self.ext = self.validate_input(x, y, w, bbox, k, None,
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/steven/env/lib/python3.12/site-packages/scipy/interpolate/_fitpack2.py", line 257, in validate_input
+    raise ValueError("x must be increasing if s > 0")
+ValueError: x must be increasing if s > 0
+
+
+Because you have debug=T I will let this kill the chain.
+The input parameters were:array([-3.03451681,  7.9596113 , -0.26585418, -2.81552623, -0.38193172,
+       -1.74861078,  1.06845803, -2.83221364,  6.55008554,  3.50946307])
+Exception ignored on calling ctypes callback function: <function MultinestSampler.config.<locals>.likelihood at 0x7fb0db54d620>
+Traceback (most recent call last):
+  File "/home/steven/env/lib/python3.12/site-packages/cosmosis/samplers/multinest/multinest_sampler.py", line 169, in likelihood
+    results = self.pipeline.run_results(vector)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/steven/env/lib/python3.12/site-packages/cosmosis/runtime/pipeline.py", line 1218, in run_results
+    like, r.extra, r.block = self.likelihood(p, return_data=True, all_params=all_params)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/steven/env/lib/python3.12/site-packages/cosmosis/runtime/pipeline.py", line 1350, in likelihood
+    data = self.run_parameters(p, all_params=all_params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/steven/env/lib/python3.12/site-packages/cosmosis/runtime/pipeline.py", line 1122, in run_parameters
+    if self.run(data):
+       ^^^^^^^^^^^^^^
+  File "/home/steven/env/lib/python3.12/site-packages/cosmosis/runtime/pipeline.py", line 648, in run
+    status = module.execute(data_package)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/steven/env/lib/python3.12/site-packages/cosmosis/runtime/module.py", line 246, in execute
+    return self.execute_function(data_block, self.data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/steven/cosmosis-standard-library//structure/projection/project_2d.py", line 1813, in execute
+    return config.execute(block)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/steven/cosmosis-standard-library//structure/projection/project_2d.py", line 1748, in execute
+    self.load_distance_splines(block)
+  File "/home/steven/cosmosis-standard-library//structure/projection/project_2d.py", line 1545, in load_distance_splines
+    self.a_of_chi = interp.InterpolatedUnivariateSpline(chi_distance, a_distance)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/steven/env/lib/python3.12/site-packages/scipy/interpolate/_fitpack2.py", line 734, in __init__
+    x, y, w, bbox, self.ext = self.validate_input(x, y, w, bbox, k, None,
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/steven/env/lib/python3.12/site-packages/scipy/interpolate/_fitpack2.py", line 257, in validate_input
+    raise ValueError("x must be increasing if s > 0")
+ValueError: x must be increasing if s > 0

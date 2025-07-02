@@ -1,0 +1,7 @@
+#parameter lerr68 data_set
+chebyshev_coefficients--c0  1.2380639116255523  ../../outputs/run22_only_2_coefs/output_multinest.txt
+chebyshev_coefficients--c1  -0.6504040193557739  ../../outputs/run22_only_2_coefs/output_multinest.txt
+prior  nan  ../../outputs/run22_only_2_coefs/output_multinest.txt
+like  -48.454941953993085  ../../outputs/run22_only_2_coefs/output_multinest.txt
+post  -46.62236049024477  ../../outputs/run22_only_2_coefs/output_multinest.txt
+weight  0.002676629684997619  ../../outputs/run22_only_2_coefs/output_multinest.txt

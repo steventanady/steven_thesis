@@ -1,0 +1,9 @@
+#parameter maxpost data_set
+chebyshev_coefficients--c0  0.9853482478718526  ../../outputs/run23_4_coefs_debugged/output_multinest.txt
+chebyshev_coefficients--c1  -0.469695954390673  ../../outputs/run23_4_coefs_debugged/output_multinest.txt
+chebyshev_coefficients--c2  0.13763057859793937  ../../outputs/run23_4_coefs_debugged/output_multinest.txt
+chebyshev_coefficients--c3  -0.06950337725419585  ../../outputs/run23_4_coefs_debugged/output_multinest.txt
+prior  8.730327626476463  ../../outputs/run23_4_coefs_debugged/output_multinest.txt
+like  -48.091703978398  ../../outputs/run23_4_coefs_debugged/output_multinest.txt
+post  -39.361376351921535  ../../outputs/run23_4_coefs_debugged/output_multinest.txt
+weight  9.860718652952087e-05  ../../outputs/run23_4_coefs_debugged/output_multinest.txt

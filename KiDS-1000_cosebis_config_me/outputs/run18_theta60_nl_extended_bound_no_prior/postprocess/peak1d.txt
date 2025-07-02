@@ -1,0 +1,17 @@
+#parameter peak1d data_set
+cosmological_parameters--ombh2  0.022841392300142843  ../../../KiDS-1000_cosebis_config_me/outputs/run18_broadened_boundaries/output_multinest.txt
+cosmological_parameters--omch2  0.09315190443952467  ../../../KiDS-1000_cosebis_config_me/outputs/run18_broadened_boundaries/output_multinest.txt
+cosmological_parameters--h0  0.7020244871424635  ../../../KiDS-1000_cosebis_config_me/outputs/run18_broadened_boundaries/output_multinest.txt
+cosmological_parameters--n_s  1.0016218138648156  ../../../KiDS-1000_cosebis_config_me/outputs/run18_broadened_boundaries/output_multinest.txt
+cosmological_parameters--s_8_input  0.6751334140200415  ../../../KiDS-1000_cosebis_config_me/outputs/run18_broadened_boundaries/output_multinest.txt
+halo_model_parameters--logt_agn  7.726232168092673  ../../../KiDS-1000_cosebis_config_me/outputs/run18_broadened_boundaries/output_multinest.txt
+intrinsic_alignment_parameters--a  -2.1195306352718566  ../../../KiDS-1000_cosebis_config_me/outputs/run18_broadened_boundaries/output_multinest.txt
+nofz_shifts--uncorr_bias_1  -0.9563344599659608  ../../../KiDS-1000_cosebis_config_me/outputs/run18_broadened_boundaries/output_multinest.txt
+nofz_shifts--uncorr_bias_2  -0.8596748321597216  ../../../KiDS-1000_cosebis_config_me/outputs/run18_broadened_boundaries/output_multinest.txt
+nofz_shifts--uncorr_bias_3  -2.1411950901025523  ../../../KiDS-1000_cosebis_config_me/outputs/run18_broadened_boundaries/output_multinest.txt
+nofz_shifts--uncorr_bias_4  0.2284551257327013  ../../../KiDS-1000_cosebis_config_me/outputs/run18_broadened_boundaries/output_multinest.txt
+nofz_shifts--uncorr_bias_5  0.4562788056809056  ../../../KiDS-1000_cosebis_config_me/outputs/run18_broadened_boundaries/output_multinest.txt
+prior  nan  ../../../KiDS-1000_cosebis_config_me/outputs/run18_broadened_boundaries/output_multinest.txt
+like  -46.01182457076607  ../../../KiDS-1000_cosebis_config_me/outputs/run18_broadened_boundaries/output_multinest.txt
+post  -50.17316064308681  ../../../KiDS-1000_cosebis_config_me/outputs/run18_broadened_boundaries/output_multinest.txt
+weight  0.00304266426296359  ../../../KiDS-1000_cosebis_config_me/outputs/run18_broadened_boundaries/output_multinest.txt

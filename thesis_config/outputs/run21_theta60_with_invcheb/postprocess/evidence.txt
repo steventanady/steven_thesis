@@ -1,0 +1,2 @@
+#logz logz_sigma data_set
+-55.097101312552724  0.1811097877318656  ../../outputs/run21_theta60_with_invcheb/output_multinest.txt
