@@ -59,7 +59,7 @@ def execute (block, config) :
         expf = model.model_pca(c)
     elif method == "inv_cheb" :
         expf = model.model_expf(c=c)
-    np.savetxt('expf.txt',expf)
+    # np.savetxt('expf.txt',expf)
     if np.any(expf<=0) :
         block["distances", "pos_expf"] = False
         print("!!!!!EXPANSION FUNCTION IS NOT POSTIVE-DEFINITE!!!!!")
