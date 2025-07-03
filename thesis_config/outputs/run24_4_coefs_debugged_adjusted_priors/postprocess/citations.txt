@@ -1,0 +1,6 @@
+#You should cite these papers in any publication based on this pipeline.
+#../../outputs/run24_4_coefs_debugged_adjusted_priors/output_multinest.txt
+https://arxiv.org/abs/1601.00115
+https://arxiv.org/abs/1201.2669
+New J Phys 9 12 444 (2007)
+MNRAS 424 3 1647 (2012)

@@ -1,0 +1,9 @@
+#parameter peak1d data_set
+chebyshev_coefficients--c0  -1.2653687847380506  ../../outputs/run24_4_coefs_debugged_adjusted_priors/output_multinest.txt
+chebyshev_coefficients--c1  -0.1423543977116294  ../../outputs/run24_4_coefs_debugged_adjusted_priors/output_multinest.txt
+chebyshev_coefficients--c2  0.05437163097824983  ../../outputs/run24_4_coefs_debugged_adjusted_priors/output_multinest.txt
+chebyshev_coefficients--c3  -0.28733928372997697  ../../outputs/run24_4_coefs_debugged_adjusted_priors/output_multinest.txt
+prior  nan  ../../outputs/run24_4_coefs_debugged_adjusted_priors/output_multinest.txt
+like  -47.255690954163356  ../../outputs/run24_4_coefs_debugged_adjusted_priors/output_multinest.txt
+post  -50.616066341305256  ../../outputs/run24_4_coefs_debugged_adjusted_priors/output_multinest.txt
+weight  0.0033687862860857995  ../../outputs/run24_4_coefs_debugged_adjusted_priors/output_multinest.txt

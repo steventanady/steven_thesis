@@ -1,0 +1,9 @@
+#parameter u95 data_set
+chebyshev_coefficients--c0  1.4777529143005124  ../../outputs/run24_4_coefs_debugged_adjusted_priors/output_multinest.txt
+chebyshev_coefficients--c1  0.672657430921409  ../../outputs/run24_4_coefs_debugged_adjusted_priors/output_multinest.txt
+chebyshev_coefficients--c2  0.5746945231243745  ../../outputs/run24_4_coefs_debugged_adjusted_priors/output_multinest.txt
+chebyshev_coefficients--c3  0.6028098597773222  ../../outputs/run24_4_coefs_debugged_adjusted_priors/output_multinest.txt
+prior  -3.3603753871419006  ../../outputs/run24_4_coefs_debugged_adjusted_priors/output_multinest.txt
+like  -47.39662135914394  ../../outputs/run24_4_coefs_debugged_adjusted_priors/output_multinest.txt
+post  -50.75699674628584  ../../outputs/run24_4_coefs_debugged_adjusted_priors/output_multinest.txt
+weight  0.0035681140007412355  ../../outputs/run24_4_coefs_debugged_adjusted_priors/output_multinest.txt

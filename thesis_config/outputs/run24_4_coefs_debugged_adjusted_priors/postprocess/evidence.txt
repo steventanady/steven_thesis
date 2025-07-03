@@ -1,0 +1,2 @@
+#logz logz_sigma data_set
+-51.402507645305654  0.1722900509670247  ../../outputs/run24_4_coefs_debugged_adjusted_priors/output_multinest.txt

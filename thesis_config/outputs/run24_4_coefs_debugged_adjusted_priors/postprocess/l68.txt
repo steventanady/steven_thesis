@@ -1,0 +1,9 @@
+#parameter l68 data_set
+chebyshev_coefficients--c0  -1.219526691316952  ../../outputs/run24_4_coefs_debugged_adjusted_priors/output_multinest.txt
+chebyshev_coefficients--c1  -0.21720250215144363  ../../outputs/run24_4_coefs_debugged_adjusted_priors/output_multinest.txt
+chebyshev_coefficients--c2  -0.115566461004717  ../../outputs/run24_4_coefs_debugged_adjusted_priors/output_multinest.txt
+chebyshev_coefficients--c3  -0.26239774500514607  ../../outputs/run24_4_coefs_debugged_adjusted_priors/output_multinest.txt
+prior  -3.3603753871419006  ../../outputs/run24_4_coefs_debugged_adjusted_priors/output_multinest.txt
+like  -48.44706698805013  ../../outputs/run24_4_coefs_debugged_adjusted_priors/output_multinest.txt
+post  -51.80744237519203  ../../outputs/run24_4_coefs_debugged_adjusted_priors/output_multinest.txt
+weight  0.002023312914344406  ../../outputs/run24_4_coefs_debugged_adjusted_priors/output_multinest.txt
