@@ -1,0 +1,14 @@
+#parameter lerr95 data_set
+chebyshev_coefficients--c0  -1.444471979121142  ../../outputs/run_cluster3_4coefs_bias_real/output_multinest.txt
+chebyshev_coefficients--c1  -0.5644753829749649  ../../outputs/run_cluster3_4coefs_bias_real/output_multinest.txt
+chebyshev_coefficients--c2  -0.49936212542539604  ../../outputs/run_cluster3_4coefs_bias_real/output_multinest.txt
+chebyshev_coefficients--c3  -0.7076806140495677  ../../outputs/run_cluster3_4coefs_bias_real/output_multinest.txt
+nofz_shifts--uncorr_bias_1  -1.718698674109096  ../../outputs/run_cluster3_4coefs_bias_real/output_multinest.txt
+nofz_shifts--uncorr_bias_2  -2.374096112485211  ../../outputs/run_cluster3_4coefs_bias_real/output_multinest.txt
+nofz_shifts--uncorr_bias_3  -3.2141769372148628  ../../outputs/run_cluster3_4coefs_bias_real/output_multinest.txt
+nofz_shifts--uncorr_bias_4  -3.064389613732913  ../../outputs/run_cluster3_4coefs_bias_real/output_multinest.txt
+nofz_shifts--uncorr_bias_5  -0.7347055487924907  ../../outputs/run_cluster3_4coefs_bias_real/output_multinest.txt
+prior  -13.266017514437431  ../../outputs/run_cluster3_4coefs_bias_real/output_multinest.txt
+like  -50.88882145411388  ../../outputs/run_cluster3_4coefs_bias_real/output_multinest.txt
+post  -61.23312017046414  ../../outputs/run_cluster3_4coefs_bias_real/output_multinest.txt
+weight  0.0003108902500406261  ../../outputs/run_cluster3_4coefs_bias_real/output_multinest.txt

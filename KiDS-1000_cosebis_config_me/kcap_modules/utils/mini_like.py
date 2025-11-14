@@ -6,13 +6,13 @@ from cosmosis.datablock.cosmosis_py import errors
 def setup(options):
     like_name = options.get_string(option_section, "like_name")
     input_section_name = options.get_string(option_section, "input_section_name", default="likelihood")
-    theory60 = options.get_string(option_section, "theory60") # MODDD
+    # theory60 = options.get_string(option_section, "theory60") # MODDD
         
-    return like_name, input_section_name, theory60
+    return like_name, input_section_name
 
 def execute(block, config):
-    # like_name, input_section_name = config
-    like_name, input_section_name, theory60 = config # MODDD, ORIGINALLY ABOVE
+    like_name, input_section_name = config
+    # like_name, input_section_name, theory60 = config # MODDD, ORIGINALLY ABOVE
 
     # Skip if expansion function is not positive-definite
     # if not block("distances", "pos_expf") :

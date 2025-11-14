@@ -1,0 +1,16 @@
+#parameter maxpost data_set
+uncorr_chebyshev_coefficients--c0  94.92612772803591  ../../outputs/run_cluster10_SN_BAO_QSO_Marie/output_multinest.txt
+uncorr_chebyshev_coefficients--c1  370.13453194495446  ../../outputs/run_cluster10_SN_BAO_QSO_Marie/output_multinest.txt
+cosmological_parameters--omch2  0.11671035094526666  ../../outputs/run_cluster10_SN_BAO_QSO_Marie/output_multinest.txt
+cosmological_parameters--ombh2  0.022088439220029406  ../../outputs/run_cluster10_SN_BAO_QSO_Marie/output_multinest.txt
+cosmological_parameters--s_8_input  0.8501648603980624  ../../outputs/run_cluster10_SN_BAO_QSO_Marie/output_multinest.txt
+intrinsic_alignment_parameters--a  -1.806616861988486  ../../outputs/run_cluster10_SN_BAO_QSO_Marie/output_multinest.txt
+nofz_shifts--uncorr_bias_1  0.19072246836344675  ../../outputs/run_cluster10_SN_BAO_QSO_Marie/output_multinest.txt
+nofz_shifts--uncorr_bias_2  -0.1753363704585808  ../../outputs/run_cluster10_SN_BAO_QSO_Marie/output_multinest.txt
+nofz_shifts--uncorr_bias_3  -0.877724258763237  ../../outputs/run_cluster10_SN_BAO_QSO_Marie/output_multinest.txt
+nofz_shifts--uncorr_bias_4  -1.6170780134177676  ../../outputs/run_cluster10_SN_BAO_QSO_Marie/output_multinest.txt
+nofz_shifts--uncorr_bias_5  0.3706640959342169  ../../outputs/run_cluster10_SN_BAO_QSO_Marie/output_multinest.txt
+prior  0.1552861607545577  ../../outputs/run_cluster10_SN_BAO_QSO_Marie/output_multinest.txt
+like  -45.64096844848943  ../../outputs/run_cluster10_SN_BAO_QSO_Marie/output_multinest.txt
+post  -45.485682287734875  ../../outputs/run_cluster10_SN_BAO_QSO_Marie/output_multinest.txt
+weight  0.0016354170196029908  ../../outputs/run_cluster10_SN_BAO_QSO_Marie/output_multinest.txt

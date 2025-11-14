@@ -1,0 +1,17 @@
+#parameter u95 data_set
+cosmological_parameters--ombh2  0.025520371859488866  ../../../KiDS-1000_cosebis_config_me/outputs/run_test3_cluster/output_multinest.txt
+cosmological_parameters--omch2  0.291197633493495  ../../../KiDS-1000_cosebis_config_me/outputs/run_test3_cluster/output_multinest.txt
+cosmological_parameters--h0  0.8063492778103322  ../../../KiDS-1000_cosebis_config_me/outputs/run_test3_cluster/output_multinest.txt
+cosmological_parameters--n_s  1.0821916392665931  ../../../KiDS-1000_cosebis_config_me/outputs/run_test3_cluster/output_multinest.txt
+cosmological_parameters--s_8_input  0.8846394070296235  ../../../KiDS-1000_cosebis_config_me/outputs/run_test3_cluster/output_multinest.txt
+halo_model_parameters--logt_agn  7.981147951784769  ../../../KiDS-1000_cosebis_config_me/outputs/run_test3_cluster/output_multinest.txt
+intrinsic_alignment_parameters--a  -0.018256642678213735  ../../../KiDS-1000_cosebis_config_me/outputs/run_test3_cluster/output_multinest.txt
+nofz_shifts--uncorr_bias_1  1.7039333935445073  ../../../KiDS-1000_cosebis_config_me/outputs/run_test3_cluster/output_multinest.txt
+nofz_shifts--uncorr_bias_2  1.418520374514688  ../../../KiDS-1000_cosebis_config_me/outputs/run_test3_cluster/output_multinest.txt
+nofz_shifts--uncorr_bias_3  0.4340505542658829  ../../../KiDS-1000_cosebis_config_me/outputs/run_test3_cluster/output_multinest.txt
+nofz_shifts--uncorr_bias_4  0.21865956541193404  ../../../KiDS-1000_cosebis_config_me/outputs/run_test3_cluster/output_multinest.txt
+nofz_shifts--uncorr_bias_5  2.663524440186374  ../../../KiDS-1000_cosebis_config_me/outputs/run_test3_cluster/output_multinest.txt
+prior  2.286883670010007  ../../../KiDS-1000_cosebis_config_me/outputs/run_test3_cluster/output_multinest.txt
+like  -45.13836105522188  ../../../KiDS-1000_cosebis_config_me/outputs/run_test3_cluster/output_multinest.txt
+post  -43.44860092886877  ../../../KiDS-1000_cosebis_config_me/outputs/run_test3_cluster/output_multinest.txt
+weight  0.003295075735113613  ../../../KiDS-1000_cosebis_config_me/outputs/run_test3_cluster/output_multinest.txt

@@ -1,0 +1,17 @@
+#parameter l95 data_set
+uncorr_chebyshev_coefficients--c0  22.988182117222966  ../../outputs/run_cluster_5_SN_prior/output_multinest.txt
+uncorr_chebyshev_coefficients--c1  247.45722975460424  ../../outputs/run_cluster_5_SN_prior/output_multinest.txt
+uncorr_chebyshev_coefficients--c2  228.16874130873543  ../../outputs/run_cluster_5_SN_prior/output_multinest.txt
+cosmological_parameters--omch2  0.06483304867018265  ../../outputs/run_cluster_5_SN_prior/output_multinest.txt
+cosmological_parameters--ombh2  0.01958102837500987  ../../outputs/run_cluster_5_SN_prior/output_multinest.txt
+cosmological_parameters--s_8_input  0.5007409558373465  ../../outputs/run_cluster_5_SN_prior/output_multinest.txt
+intrinsic_alignment_parameters--a  -5.0742698337222825  ../../outputs/run_cluster_5_SN_prior/output_multinest.txt
+nofz_shifts--uncorr_bias_1  -1.3548973231018215  ../../outputs/run_cluster_5_SN_prior/output_multinest.txt
+nofz_shifts--uncorr_bias_2  -1.818818583132775  ../../outputs/run_cluster_5_SN_prior/output_multinest.txt
+nofz_shifts--uncorr_bias_3  -2.7918634833203533  ../../outputs/run_cluster_5_SN_prior/output_multinest.txt
+nofz_shifts--uncorr_bias_4  -2.868705795118525  ../../outputs/run_cluster_5_SN_prior/output_multinest.txt
+nofz_shifts--uncorr_bias_5  -0.15705588241747215  ../../outputs/run_cluster_5_SN_prior/output_multinest.txt
+prior  -10.206464510649774  ../../outputs/run_cluster_5_SN_prior/output_multinest.txt
+like  -48.30419414097183  ../../outputs/run_cluster_5_SN_prior/output_multinest.txt
+post  -57.808480611271875  ../../outputs/run_cluster_5_SN_prior/output_multinest.txt
+weight  0.00037879596723037616  ../../outputs/run_cluster_5_SN_prior/output_multinest.txt

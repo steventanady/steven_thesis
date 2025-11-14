@@ -22,6 +22,14 @@ def execute(block, config):
     r = d - mu  
     # np.savetxt("d.txt",d)
 
+    # MODDD, Removing 2 bins, i.e. starting from data point 46
+    # d = d[45:]
+    # mu = mu[45:]
+    # r = r[45:]
+    # inv_cov = inv_cov[45:,45:]
+    np.savetxt("data.txt",d)
+    np.savetxt("theory.txt",mu)
+
     chi2 = float(r @ inv_cov @ r)
     if not block["distances", "pos_expf"] :
         chi2 = 9e+100

@@ -1,0 +1,17 @@
+#parameter u68 data_set
+chebyshev_coefficients--c0  1.0314799129933014  ../../outputs/run_cluster14_WL_only/output_multinest.txt
+chebyshev_coefficients--c1  0.16967299980348005  ../../outputs/run_cluster14_WL_only/output_multinest.txt
+chebyshev_coefficients--c2  0.1437073868748967  ../../outputs/run_cluster14_WL_only/output_multinest.txt
+chebyshev_coefficients--c3  0.1311744271829583  ../../outputs/run_cluster14_WL_only/output_multinest.txt
+cosmological_parameters--omch2  0.18583465018783646  ../../outputs/run_cluster14_WL_only/output_multinest.txt
+cosmological_parameters--ombh2  0.02340650874334048  ../../outputs/run_cluster14_WL_only/output_multinest.txt
+intrinsic_alignment_parameters--a  -1.5019945965492238  ../../outputs/run_cluster14_WL_only/output_multinest.txt
+nofz_shifts--uncorr_bias_1  0.48436319473663303  ../../outputs/run_cluster14_WL_only/output_multinest.txt
+nofz_shifts--uncorr_bias_2  0.18605467432597791  ../../outputs/run_cluster14_WL_only/output_multinest.txt
+nofz_shifts--uncorr_bias_3  -0.667436786608107  ../../outputs/run_cluster14_WL_only/output_multinest.txt
+nofz_shifts--uncorr_bias_4  -0.9920396919768982  ../../outputs/run_cluster14_WL_only/output_multinest.txt
+nofz_shifts--uncorr_bias_5  1.733523705227911  ../../outputs/run_cluster14_WL_only/output_multinest.txt
+prior  -6.346243227736414  ../../outputs/run_cluster14_WL_only/output_multinest.txt
+like  -46.310772340844714  ../../outputs/run_cluster14_WL_only/output_multinest.txt
+post  -53.068603566490935  ../../outputs/run_cluster14_WL_only/output_multinest.txt
+weight  0.0029548107905336784  ../../outputs/run_cluster14_WL_only/output_multinest.txt

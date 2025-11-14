@@ -1,10 +1,10 @@
 #!/bin/bash 
-foldername=/where/the/inifile/is/
-ini_file=${foldername}/config/pipeline.ini
-multinest_file=/where/the/multinest/file/is/filename # This can in principle be any file with the same columns as the multinest file (doesn't need the weights though). So it can be a list of parameter values with the same ordering that would be in a output multinest file produced by cosmosis usign the same inifile as ${ini_file}. Then code will look for the columns called post and like to find the row with the best fit values and starts from there. Alternatively if this is not given will look in the values.ini file that is named in the ${ini_file} for the start values. 
-output_file_name=/where/the/output/will/be/saved/output_name
-bestfit_file_name=/where/the/bestfit/values_ini/will/be/saved/bestfit_name_values
-bestfit_prior_name=/where/the/bestfit/priors_ini/will/be/saved/bestfit_name_priors # If  --best_fit_value set but this is not set it will still produce somethig with the same name but a "prior_" added to the start
+foldername=/home/steven/thesis/thesis_config/config/tester
+ini_file=${foldername}/tester_oms8.ini
+multinest_file=/home/steven/thesis/thesis_config/outputs/run_cluster10_SN_BAO_QSO_Marie/output_multinest.txt    # This can in principle be any file with the same columns as the multinest file (doesn't need the weights though). So it can be a list of parameter values with the same ordering that would be in a output multinest file produced by cosmosis usign the same inifile as ${ini_file}. Then code will look for the columns called post and like to find the row with the best fit values and starts from there. Alternatively if this is not given will look in the values.ini file that is named in the ${ini_file} for the start values. 
+output_file_name=/home/steven/thesis/thesis_config/outputs/run_cluster10_SN_BAO_QSO_Marie/output_nelder_mead
+bestfit_file_name=/home/steven/thesis/thesis_config/outputs/run_cluster10_SN_BAO_QSO_Marie/bestfit_nelder_mead
+bestfit_prior_name=/home/steven/thesis/thesis_config/outputs/run_cluster10_SN_BAO_QSO_Marie/bestfit_priors # If  --best_fit_value set but this is not set it will still produce somethig with the same name but a "prior_" added to the start
 
 # If -s is removed it will only save the best fit result and not the steps.
 

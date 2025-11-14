@@ -1,107 +1,77 @@
 # This module is used with camb
 from cosmosis.datablock import names, option_section
 import numpy as np
-from scipy.integrate import trapz
-from cosmology3 import Cosmology
+from cosmology_mod import Cosmology
 import time
 import matplotlib.pyplot as plt
+from model_independent import model_independent
+from model_independent import Growth_Factor
 
 def setup (options) :
-    # This part takes information from the setup parameters of the module in the .ini file
-    
-    #############################################
-    # Some examples of how this is done:
-    # zmax = options[option_section, "zmax"]
-	# nz = options[option_section, "nz"]
-	# model = options[option_section, "model"]
-    #############################################
-    # Load matter power spectrum at the furthest source (z = 6)
-    # pm0 = np.loadtxt(options[option_section,"pm0"])[-1,:]
-    # k_h = np.loadtxt(options[option_section,"k_h"])
-    # k = np.loadtxt("k_h.txt", skiprows=1)
+    return 0
 
-    return {}
-
-def linear_evolution(block, config, a) :
+def linear_evolution(block, a) :
     h0 = block["cosmological_parameters","h0"]
-    c1 = block["chebyshev_coefficients","c1"]
-    c2 = block["chebyshev_coefficients","c2"]
-    c3 = block["chebyshev_coefficients","c3"]
-    omega_c = block["cosmological_parameters", "omch2"]/h0**2
-    omega_b = block["cosmological_parameters", "ombh2"]/h0**2
-    omega_m = omega_b + omega_c
-    # omega_m = block["cosmological_parameters", "omega_m"]
-    # pm0 = config["pm0"]
-    # pm0 = np.array(pm0)
-    pm0 = block["matter_power_lin", "p_k"][-1]
+    exponent = block["distances", "exponent"] # The 'n' in the model-indep expf.
 
-    dplus = Cosmology (c1,c2,c3,hubble=h0,omega_matter=omega_m) # D+ at each a
+    # Read the cheb coeffs from block
+    c = []
+    i=0
+    while True:
+        if block.has_value("chebyshev_coefficients", f"c{i}"):
+            c.append(block["chebyshev_coefficients", f"c{i}"])
+            i += 1
+        else:
+            break
+    c = np.array(c)
 
-    # Use this for Matthias' code
-    # dplus = Cosmology(a[0],hubble = h0, omega_matter = omega_m) 
+    if ("cosmological_parameters", "omh2") in block :
+        omega_m = block["cosmological_parameters", "omh2"]/h0**2
+    else :
+        omega_c = block["cosmological_parameters","omch2"]/h0**2
+        omega_b = block["cosmological_parameters","ombh2"]/h0**2
+        omega_m = omega_c + omega_b
+
+    # Read the LCDM matter power spectrum from CAMB at the z_max
+    pm0 = block["matter_power_lin", "p_k"][-1] 
+
+    # Setting up the tools to evolve matter power model independently
+    a_bg = block["distances","a"]
+    dplus = Growth_Factor (c,a_bg,h0=h0,om=omega_m,n=exponent) # D+ at each a
+
+    # Calculating model-indep D+
     Dplus = [] # array of D+
     for i in a : 
         Dplus.append(dplus.D_plus(i))
     Dplus = np.array(Dplus)
     Dplus = Dplus/Dplus[0] # Re-Normalize it such that D+(z=6) = 1
-    # np.savetxt("dpl2.txt", Dplus)
 
+    # Evolve matter power model independently
     pm = np.zeros((Dplus.shape[0],pm0.shape[0]))
     for i in range(0, Dplus.shape[0]) :
         pm[i] = pm0*Dplus[i]**2
-    # np.savetxt("pm.txt", pm)
     return pm
 
-# def linear_evolution(growth_factor) :
-#     growth_factor = []
-#     a = block["distances","a"]
-#     h0 = block["cosmological_parameters","h0"]
-#     c1 = block["chebyshev_coefficients","c1"]
-#     c2 = block["chebyshev_coefficients","c2"]
-#     c3 = block["chebyshev_coefficients","c3"]
-#     for i in a :
-#         Dplus = Cosmology (c1,c2,c3,hubble=h0)
-#         growth_factor.append(Dplus.D_plus(i))
-#     growth_factor = np.array(growth_factor)
-
-#     # Evolve it
-#     pm = config["pm"]
-#     for i in a :
-#         pm_evolved = pm * growth_factor(i)
-    
-#     return pm_evolved
-
 def execute (block, config) :
-    #############################################
-    # Examples :
-    # a = config["a"] #config is used to get values from setup
-
-    # Some values from previous modules
-    # z = block["distances","z"]
-    # d_a = block["distances","D_A"]
-    # H = block["distances","H"]
-
-    # Save to data block
-    # d_v = ((1.0+z)**2 * c * z * d_a**2 / H )**(1./3.)
-    # block["distances","d_v"] = d_v
-    #############################################
+    # Skip the calculation if the sample gives negative expansion function
+    # cause we don't like it (also because the project_2d module crashes)
+    if not block["distances", "pos_expf"] :
+        return 0
+    
+    a = block["matter_power_lin","a"]
+    pm = linear_evolution(block, a)
+    # Skip the calculation if the calculated matter power contains 'nan'
+    if np.any(np.isnan(pm)) :
+        pm = np.ones_like(pm)
+        block["distances", "pos_expf"] = False # Using the same flag to as negative expf to skip, but it doesn't really matter
+        print("NAN POWER SPECTRUM")
+        block.put_grid("matter_power_lin", "z", z, "k_h", k_h, "p_k", pm)
+        return 0
+    
     z = block["matter_power_lin","z"]
-    # a = block["matter_power_lin","a"]
-    a=1/(1+z)
-    a=a[::-1]
-    pm = linear_evolution(block, config, a)
-    pm = pm[::-1]
-    # np.savetxt("pm_lin_me.txt",pm)
-
-    # block["matter_power_lin","p_k"] = pm
-    # z = block["matter_power_lin","z"]
     k_h = block["matter_power_lin","k_h"]
 
+    pm = pm[::-1]
     block.put_grid("matter_power_lin", "z", z, "k_h", k_h, "p_k", pm)
-
-    # Non-linear part, simply for the sake to run the pipeline (DON'T DO THIS YOU DUMBASSSSSSS)
-    # pm_nl = pm
-    # pm_nl = np.zeros_like(pm)
-    # block.put_grid("matter_power_nl", "z", z, "k_h", k_h, "p_k", pm_nl)
 
     return 0

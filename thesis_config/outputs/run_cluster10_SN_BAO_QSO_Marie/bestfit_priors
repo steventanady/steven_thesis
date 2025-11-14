@@ -1,0 +1,11 @@
+[nofz_shifts]
+uncorr_bias_1  =  gaussian    0.047949108850896316    1.0
+uncorr_bias_2  =  gaussian    -0.2314137313678959    1.0
+uncorr_bias_3  =  gaussian    -1.1926497890691583    1.0
+uncorr_bias_4  =  gaussian    -1.364967649216244    1.0
+uncorr_bias_5  =  gaussian    1.2562347568501586    1.0
+
+[uncorr_chebyshev_coefficients]
+c0  =  gaussian    94.85220728444153    1.0
+c1  =  gaussian    370.2209654426802    1.0
+

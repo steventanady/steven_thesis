@@ -1,0 +1,8 @@
+#You should cite these papers in any publication based on this pipeline.
+#../../outputs/run27_Alex_prior_withS8_fixedEa/output_multinest.txt
+http://arxiv.org/abs/1201.3654
+MNRAS 424 3 1647 (2012)
+https://arxiv.org/abs/1601.00115
+http://arxiv.org/abs/astro-ph/9911177
+https://arxiv.org/abs/1201.2669
+New J Phys 9 12 444 (2007)

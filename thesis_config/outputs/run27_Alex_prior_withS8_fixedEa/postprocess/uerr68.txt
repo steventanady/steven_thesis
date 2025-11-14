@@ -1,0 +1,17 @@
+#parameter uerr68 data_set
+chebyshev_coefficients--c0  0.12324645381975084  ../../outputs/run27_Alex_prior_withS8_fixedEa/output_multinest.txt
+chebyshev_coefficients--c1  -0.029005516692262295  ../../outputs/run27_Alex_prior_withS8_fixedEa/output_multinest.txt
+chebyshev_coefficients--c2  0.005281852057522579  ../../outputs/run27_Alex_prior_withS8_fixedEa/output_multinest.txt
+cosmological_parameters--omch2  0.13720469764812676  ../../outputs/run27_Alex_prior_withS8_fixedEa/output_multinest.txt
+cosmological_parameters--ombh2  0.02433027319356291  ../../outputs/run27_Alex_prior_withS8_fixedEa/output_multinest.txt
+cosmological_parameters--s_8_input  1.0325930523729039  ../../outputs/run27_Alex_prior_withS8_fixedEa/output_multinest.txt
+intrinsic_alignment_parameters--a  -1.184769682033746  ../../outputs/run27_Alex_prior_withS8_fixedEa/output_multinest.txt
+nofz_shifts--uncorr_bias_1  0.967157306899226  ../../outputs/run27_Alex_prior_withS8_fixedEa/output_multinest.txt
+nofz_shifts--uncorr_bias_2  0.5004770711920986  ../../outputs/run27_Alex_prior_withS8_fixedEa/output_multinest.txt
+nofz_shifts--uncorr_bias_3  -0.347908275924815  ../../outputs/run27_Alex_prior_withS8_fixedEa/output_multinest.txt
+nofz_shifts--uncorr_bias_4  -0.45220369152056505  ../../outputs/run27_Alex_prior_withS8_fixedEa/output_multinest.txt
+nofz_shifts--uncorr_bias_5  2.0710517065901604  ../../outputs/run27_Alex_prior_withS8_fixedEa/output_multinest.txt
+prior  12.119849661838703  ../../outputs/run27_Alex_prior_withS8_fixedEa/output_multinest.txt
+like  -46.17332245538111  ../../outputs/run27_Alex_prior_withS8_fixedEa/output_multinest.txt
+post  -33.83987105749189  ../../outputs/run27_Alex_prior_withS8_fixedEa/output_multinest.txt
+weight  0.00378486568683114  ../../outputs/run27_Alex_prior_withS8_fixedEa/output_multinest.txt

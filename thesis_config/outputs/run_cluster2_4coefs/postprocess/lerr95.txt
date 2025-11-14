@@ -1,0 +1,9 @@
+#parameter lerr95 data_set
+chebyshev_coefficients--c0  -1.4998487538577434  ../../outputs/run_cluster2_4coefs/output_multinest.txt
+chebyshev_coefficients--c1  -0.6381730454001493  ../../outputs/run_cluster2_4coefs/output_multinest.txt
+chebyshev_coefficients--c2  -0.6781867424806277  ../../outputs/run_cluster2_4coefs/output_multinest.txt
+chebyshev_coefficients--c3  -0.6303697011417704  ../../outputs/run_cluster2_4coefs/output_multinest.txt
+prior  nan  ../../outputs/run_cluster2_4coefs/output_multinest.txt
+like  -50.242555502403555  ../../outputs/run_cluster2_4coefs/output_multinest.txt
+post  -53.60293088954546  ../../outputs/run_cluster2_4coefs/output_multinest.txt
+weight  0.00032283949988463337  ../../outputs/run_cluster2_4coefs/output_multinest.txt

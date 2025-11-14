@@ -1,0 +1,9 @@
+#parameter maxlike data_set
+chebyshev_coefficients--c0  0.9219784994272122  ../../outputs/run_cluster4_4coefs_bias_z2_real/output_multinest.txt
+chebyshev_coefficients--c1  -0.35151928153090317  ../../outputs/run_cluster4_4coefs_bias_z2_real/output_multinest.txt
+chebyshev_coefficients--c2  0.4948425594151469  ../../outputs/run_cluster4_4coefs_bias_z2_real/output_multinest.txt
+chebyshev_coefficients--c3  -0.44259610793744086  ../../outputs/run_cluster4_4coefs_bias_z2_real/output_multinest.txt
+prior  -3.3603753871419006  ../../outputs/run_cluster4_4coefs_bias_z2_real/output_multinest.txt
+like  -44.85843674660965  ../../outputs/run_cluster4_4coefs_bias_z2_real/output_multinest.txt
+post  -48.21881213375155  ../../outputs/run_cluster4_4coefs_bias_z2_real/output_multinest.txt
+weight  9.986879571991753e-05  ../../outputs/run_cluster4_4coefs_bias_z2_real/output_multinest.txt

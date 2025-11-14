@@ -1,0 +1,9 @@
+#parameter u68 data_set
+chebyshev_coefficients--c0  1.113718511956709  ../../outputs/run_cluster2_4coefs/output_multinest.txt
+chebyshev_coefficients--c1  0.22023292478991002  ../../outputs/run_cluster2_4coefs/output_multinest.txt
+chebyshev_coefficients--c2  0.10900278679740784  ../../outputs/run_cluster2_4coefs/output_multinest.txt
+chebyshev_coefficients--c3  0.2880371513564734  ../../outputs/run_cluster2_4coefs/output_multinest.txt
+prior  -3.3603753871419006  ../../outputs/run_cluster2_4coefs/output_multinest.txt
+like  -47.62395663752531  ../../outputs/run_cluster2_4coefs/output_multinest.txt
+post  -50.98433202466721  ../../outputs/run_cluster2_4coefs/output_multinest.txt
+weight  0.003518586266287775  ../../outputs/run_cluster2_4coefs/output_multinest.txt

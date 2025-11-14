@@ -1,0 +1,17 @@
+#parameter uerr68 data_set
+chebyshev_coefficients--c0  0.12327898566262355  ../../outputs/run_cluster5_Alex_prior_oms8/output_multinest.txt
+chebyshev_coefficients--c1  -0.03028378361231577  ../../outputs/run_cluster5_Alex_prior_oms8/output_multinest.txt
+chebyshev_coefficients--c2  0.005207816660350504  ../../outputs/run_cluster5_Alex_prior_oms8/output_multinest.txt
+cosmological_parameters--omch2  0.1519193301001079  ../../outputs/run_cluster5_Alex_prior_oms8/output_multinest.txt
+cosmological_parameters--ombh2  0.02510294894463709  ../../outputs/run_cluster5_Alex_prior_oms8/output_multinest.txt
+cosmological_parameters--s_8_input  0.9750141865436781  ../../outputs/run_cluster5_Alex_prior_oms8/output_multinest.txt
+intrinsic_alignment_parameters--a  -1.1208515167236321  ../../outputs/run_cluster5_Alex_prior_oms8/output_multinest.txt
+nofz_shifts--uncorr_bias_1  1.1166408842814615  ../../outputs/run_cluster5_Alex_prior_oms8/output_multinest.txt
+nofz_shifts--uncorr_bias_2  0.5812284643918788  ../../outputs/run_cluster5_Alex_prior_oms8/output_multinest.txt
+nofz_shifts--uncorr_bias_3  -0.19909230989528026  ../../outputs/run_cluster5_Alex_prior_oms8/output_multinest.txt
+nofz_shifts--uncorr_bias_4  -0.4970065535980861  ../../outputs/run_cluster5_Alex_prior_oms8/output_multinest.txt
+nofz_shifts--uncorr_bias_5  2.1518390161013525  ../../outputs/run_cluster5_Alex_prior_oms8/output_multinest.txt
+prior  11.998046140055653  ../../outputs/run_cluster5_Alex_prior_oms8/output_multinest.txt
+like  -44.8741738337572  ../../outputs/run_cluster5_Alex_prior_oms8/output_multinest.txt
+post  -34.38583360318071  ../../outputs/run_cluster5_Alex_prior_oms8/output_multinest.txt
+weight  0.0037876348838603423  ../../outputs/run_cluster5_Alex_prior_oms8/output_multinest.txt

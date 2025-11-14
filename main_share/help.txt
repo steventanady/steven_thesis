@@ -1,0 +1,35 @@
+Code is compiled with: make
+
+Code is run with: ./main.x {options}
+
+valid options are:
+
+  -i {input file list}
+     
+  -q {quasar input}
+  	seperate since different format
+     
+  -b {n}
+     number of basis functions to be used
+   
+  -e {double}
+     exponent used in the expansion into basis functions
+     -0.5 corresponds to -1 in the thesis
+     
+Example: 
+     
+Use all data sets: 
+          
+./main.x -i "pantheon+Sample;bao+Sample;cmbSample" -q "qso" -b 5 -e "-0.5"
+
+No quasars: 
+
+./main.x -i "pantheon+Sample;bao+Sample;cmbSample" -b 5 -e "-0.5"
+
+Outputs: 
+
+coefficients.d, expFunction.d, luminosityDistanceModel.d, growthFunction.d 
+
+for quasars additionally: qsoSample.d with distance modulus and errors since 
+these depend on some of the fit parameters and we dont have them before
+

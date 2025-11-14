@@ -1,0 +1,2 @@
+#logz logz_sigma data_set
+-51.820357892016  0.11794007224797005  ../../outputs/run26_Alex_prior/output_multinest.txt

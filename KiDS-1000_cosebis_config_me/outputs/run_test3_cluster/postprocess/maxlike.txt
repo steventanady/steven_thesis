@@ -1,0 +1,17 @@
+#parameter maxlike data_set
+cosmological_parameters--ombh2  0.02234990027242058  ../../../KiDS-1000_cosebis_config_me/outputs/run_test3_cluster/output_multinest.txt
+cosmological_parameters--omch2  0.04692008523708833  ../../../KiDS-1000_cosebis_config_me/outputs/run_test3_cluster/output_multinest.txt
+cosmological_parameters--h0  0.7480700131832455  ../../../KiDS-1000_cosebis_config_me/outputs/run_test3_cluster/output_multinest.txt
+cosmological_parameters--n_s  1.016199352240862  ../../../KiDS-1000_cosebis_config_me/outputs/run_test3_cluster/output_multinest.txt
+cosmological_parameters--s_8_input  0.6330884515162553  ../../../KiDS-1000_cosebis_config_me/outputs/run_test3_cluster/output_multinest.txt
+halo_model_parameters--logt_agn  7.7241140411305365  ../../../KiDS-1000_cosebis_config_me/outputs/run_test3_cluster/output_multinest.txt
+intrinsic_alignment_parameters--a  -5.045474372153297  ../../../KiDS-1000_cosebis_config_me/outputs/run_test3_cluster/output_multinest.txt
+nofz_shifts--uncorr_bias_1  0.7755903630925332  ../../../KiDS-1000_cosebis_config_me/outputs/run_test3_cluster/output_multinest.txt
+nofz_shifts--uncorr_bias_2  -1.3674775330343891  ../../../KiDS-1000_cosebis_config_me/outputs/run_test3_cluster/output_multinest.txt
+nofz_shifts--uncorr_bias_3  -3.2220872145387602  ../../../KiDS-1000_cosebis_config_me/outputs/run_test3_cluster/output_multinest.txt
+nofz_shifts--uncorr_bias_4  0.20067602844960675  ../../../KiDS-1000_cosebis_config_me/outputs/run_test3_cluster/output_multinest.txt
+nofz_shifts--uncorr_bias_5  1.8573443244520151  ../../../KiDS-1000_cosebis_config_me/outputs/run_test3_cluster/output_multinest.txt
+prior  -1.9264195615541007  ../../../KiDS-1000_cosebis_config_me/outputs/run_test3_cluster/output_multinest.txt
+like  -44.72284060367235  ../../../KiDS-1000_cosebis_config_me/outputs/run_test3_cluster/output_multinest.txt
+post  -46.64926016522645  ../../../KiDS-1000_cosebis_config_me/outputs/run_test3_cluster/output_multinest.txt
+weight  0.00047871732751540925  ../../../KiDS-1000_cosebis_config_me/outputs/run_test3_cluster/output_multinest.txt

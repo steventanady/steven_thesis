@@ -1,0 +1,9 @@
+#parameter l95 data_set
+chebyshev_coefficients--c0  -1.452594463465085  ../../outputs/run_cluster4_4coefs_bias_z2_real/output_multinest.txt
+chebyshev_coefficients--c1  -0.567388945637978  ../../outputs/run_cluster4_4coefs_bias_z2_real/output_multinest.txt
+chebyshev_coefficients--c2  -0.5420106412325463  ../../outputs/run_cluster4_4coefs_bias_z2_real/output_multinest.txt
+chebyshev_coefficients--c3  -0.6126732683236656  ../../outputs/run_cluster4_4coefs_bias_z2_real/output_multinest.txt
+prior  -3.3603753871419006  ../../outputs/run_cluster4_4coefs_bias_z2_real/output_multinest.txt
+like  -50.76636217868406  ../../outputs/run_cluster4_4coefs_bias_z2_real/output_multinest.txt
+post  -54.12673756582596  ../../outputs/run_cluster4_4coefs_bias_z2_real/output_multinest.txt
+weight  0.0003147057111845626  ../../outputs/run_cluster4_4coefs_bias_z2_real/output_multinest.txt

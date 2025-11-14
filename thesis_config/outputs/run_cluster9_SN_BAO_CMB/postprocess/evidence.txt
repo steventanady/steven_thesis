@@ -1,0 +1,2 @@
+#logz logz_sigma data_set
+-50.50067830656234  0.14766630645672968  ../../outputs/run_cluster9_SN_BAO_CMB/output_multinest.txt

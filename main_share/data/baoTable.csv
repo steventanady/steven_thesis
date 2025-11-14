@@ -1,0 +1,89 @@
+Alam;10.1093/mnras/stx721;0.6100;9.595428;0.135542;galaxy clustering in BOSS DR12, combined with various priors;2017MNRAS.470.2617A;ignore: uses priors
+Alam;10.1093/mnras/stx721;0.5100;8.859599;0.120664;galaxy clustering in BOSS DR12, combined with various priors;2017MNRAS.470.2617A;ignore: uses priors
+Alam;10.1093/mnras/stx721;0.3800;7.443497;0.273015;galaxy clustering in BOSS DR12, combined with various priors;2017MNRAS.470.2617A;
+Bautista;10.1051/0004-6361/201730533;2.3300;11.342342;0.639640;Lya forest in 157783 BOSS DR12 quasars;2017A&A...603A..12B;
+Beutler;10.1093/mnras/stw2373;0.6100;9.696847;0.142103;power spectrum of galaxy distribution in BOSS DR12;2017MNRAS.464.3409B;ignore: superseded by 62
+Beutler;10.1093/mnras/stw2373;0.5100;8.850995;0.121803;power spectrum of galaxy distribution in BOSS DR12;2017MNRAS.464.3409B;ignore: superseded by 40
+Beutler;10.1093/mnras/stw2373;0.3800;7.389363;0.121803;power spectrum of galaxy distribution in BOSS DR12;2017MNRAS.464.3409B;
+Carvalho;10.1103/PhysRevD.93.023530;0.5500;8.702063;0.511886;angular galaxy clustering in SDSS DR10;2016PhRvD..93b3530C;
+Carvalho;10.1103/PhysRevD.93.023530;0.5300;8.733617;0.610742;angular galaxy clustering in SDSS DR10;2016PhRvD..93b3530C;
+Carvalho;10.1103/PhysRevD.93.023530;0.5100;7.892613;0.278949;angular galaxy clustering in SDSS DR10;2016PhRvD..93b3530C;
+Carvalho;10.1103/PhysRevD.93.023530;0.4900;7.710030;0.324470;angular galaxy clustering in SDSS DR10;2016PhRvD..93b3530C;
+Carvalho;10.1103/PhysRevD.93.023530;0.4700;7.768225;0.386864;angular galaxy clustering in SDSS DR10;2016PhRvD..93b3530C;
+Carvalho;10.1103/PhysRevD.93.023530;0.4500;8.288128;0.295384;angular galaxy clustering in SDSS DR10;2016PhRvD..93b3530C;
+Chuang;10.1093/mnras/stx1641;0.6400;9.779223;0.277665;redshift-space distortion moments of LOWZ and CMASS galaxy samples in BOSS DR12;2017MNRAS.471.2370C;
+Chuang;10.1093/mnras/stw1535;0.6400;9.901124;0.284437;autocorrelation function of CMASS galaxies in BOSS DR12;2016MNRAS.461.3781C;
+Chuang;10.1093/mnras/stx1641;0.5900;9.623459;0.155763;redshift-space distortion moments of LOWZ and CMASS galaxy samples in BOSS DR12;2017MNRAS.471.2370C;
+Chuang;10.1093/mnras/stx1641;0.5900;9.599085;0.174896;redshift-space distortion moments of LOWZ and CMASS galaxy samples in BOSS DR12;2017MNRAS.471.2370C;ignore: superseded by 55
+Chuang;10.1093/mnras/stw1535;0.5900;9.589598;0.169308;autocorrelation function of CMASS galaxies in BOSS DR12;2016MNRAS.461.3781C;
+Chuang;10.1093/mnras/stx1641;0.4900;8.722741;0.209942;redshift-space distortion moments of LOWZ and CMASS galaxy samples in BOSS DR12;2017MNRAS.471.2370C;
+Chuang;10.1093/mnras/stw1535;0.4900;8.709197;0.264120;autocorrelation function of CMASS galaxies in BOSS DR12;2016MNRAS.461.3781C;
+Chuang;10.1093/mnras/stx1641;0.3700;6.724909;0.440200;redshift-space distortion moments of LOWZ and CMASS galaxy samples in BOSS DR12;2017MNRAS.471.2370C;
+Chuang;10.1093/mnras/stw1535;0.3700;7.381823;0.331843;autocorrelation function of CMASS galaxies in BOSS DR12;2016MNRAS.461.3781C;
+Chuang;10.1093/mnras/stx1641;0.3200;6.474333;0.189625;redshift-space distortion moments of LOWZ and CMASS galaxy samples in BOSS DR12;2017MNRAS.471.2370C;
+Chuang;10.1093/mnras/stw1535;0.3200;6.697819;0.209942;autocorrelation function of CMASS galaxies in BOSS DR12;2016MNRAS.461.3781C;independent of 9?
+Chuang;10.1093/mnras/stx1641;0.2400;5.593932;0.304754;redshift-space distortion moments of LOWZ and CMASS galaxy samples in BOSS DR12;2017MNRAS.471.2370C;
+Chuang;10.1093/mnras/stw1535;0.2400;5.363673;0.467290;autocorrelation function of CMASS galaxies in BOSS DR12;2016MNRAS.461.3781C;
+Cuesta;10.1093/mnras/stw066;0.5700;9.524133;0.142760;autocorrelation function of CMASS and LOWZ galaxies in BOSS DR12, z = 0.3-0.5;2016MNRAS.457.1770C;
+Cuesta;10.1093/mnras/stw066;0.3200;6.668933;0.394290;autocorrelation function of CMASS and LOWZ galaxies in BOSS DR12, z = 0.3-0.5;2016MNRAS.457.1770C;
+de Carvalho;10.1088/1475-7516/2018/04/064;2.2250;10.042454;1.758848;autocorrelation function of BOSS DR12 quasars;2018JCAP...04..064D;
+Delubac;10.1051/0004-6361/201423969;2.3400;11.275441;0.651289;Lya forest in 137562 BOSS DR11 quasars;2015A&A...574A..59D;
+du Mas des Bourboux;10.1051/0004-6361/201731731;2.4000;10.500000;1.251297;cross-correlation between 234367 quasars and 168889 forests in BOSS;2017A&A...608A.130D;
+Font-Ribera;10.1051/0004-6361/201423969;2.3600;10.800000;0.400000;Lya forest in 137562 BOSS DR11 quasars;2015A&A...574A..59D;
+Gil-Marín;10.1093/mnras/stw2679;1.5200;12.518609;0.744350;combination of power spectrum and bispectrum of BOSS DR12 galaxies;2017MNRAS.465.1757G;
+Gil-Marín;10.1093/mnras/sty453;0.5700;9.420000;0.130000;analysis of redshift-space distortion moments in BOSS DR14 quasars;2018MNRAS.477.1604G;
+Gil-Marín;10.1093/mnras/sty453;0.3200;6.660000;0.160000;analysis of redshift-space distortion moments in BOSS DR14 quasars;2018MNRAS.477.1604G;
+Vargas-Magana;10.1093/mnras/sty571;0.6100;9.629179;0.159272;galaxy clustering in BOSS DR12, systematic-error analysis;2018MNRAS.477.1153V;
+Vargas-Magana;10.1093/mnras/sty571;0.5100;8.850995;0.126415;galaxy clustering in BOSS DR12, systematic-error analysis;2018MNRAS.477.1153V;
+Vargas-Magana;10.1093/mnras/sty571;0.3800;7.389363;0.111601;galaxy clustering in BOSS DR12, systematic-error analysis;2018MNRAS.477.1153V;
+Wang;10.1093/mnras/sty654;2.2000;12.169695;0.496938;Fourier-space measurement of clustering of eBOSS DR14 quasars;2018MNRAS.477.1528W;
+Wang;10.1093/mnras/sty654;2.0000;12.358461;0.539090;Fourier-space measurement of clustering of eBOSS DR14 quasars;2018MNRAS.477.1528W;
+Wang;10.1093/mnras/sty654;1.5000;12.069292;0.744350;Fourier-space measurement of clustering of eBOSS DR14 quasars;2018MNRAS.477.1528W;
+Wang;10.1093/mnras/sty654;1.0000;12.044932;0.987955;Fourier-space measurement of clustering of eBOSS DR14 quasars;2018MNRAS.477.1528W;
+Wang;10.1093/mnras/sty654;0.8000;10.372024;0.969910;Fourier-space measurement of clustering of eBOSS DR14 quasars;2018MNRAS.477.1528W;
+Wang;10.1093/mnras/sty2449;0.6400;9.557330;0.277515;tomographic analysis of galaxy clustering in BOSS DR12;2018MNRAS.481.3160W;
+Wang;10.1093/mnras/stx1090;0.6400;9.620000;0.220000;tomographic configuration-space analysis of galaxy autocorrelations in BOSS DR12;2017MNRAS.469.3762W;ignore: same as 66
+Wang;10.1093/mnras/stx1090;0.6400;9.620000;0.220000;tomographic configuration-space analysis of galaxy autocorrelations in BOSS DR12;2017MNRAS.469.3762W;
+Wang;10.1093/mnras/sty2449;0.5900;9.516719;0.230134;tomographic analysis of galaxy clustering in BOSS DR12;2018MNRAS.481.3160W;
+Wang;10.1093/mnras/stx1090;0.5900;9.450000;0.170000;tomographic configuration-space analysis of galaxy autocorrelations in BOSS DR12;2017MNRAS.469.3762W;ignore: same as 57
+Wang;10.1093/mnras/stx1090;0.5900;9.450000;0.170000;tomographic configuration-space analysis of galaxy autocorrelations in BOSS DR12;2017MNRAS.469.3762W;
+Wang;10.1093/mnras/sty2449;0.5600;9.381346;0.203059;tomographic analysis of galaxy clustering in BOSS DR12;2018MNRAS.481.3160W;
+Wang;10.1093/mnras/stx1090;0.5600;9.160000;0.140000;tomographic configuration-space analysis of galaxy autocorrelations in BOSS DR12;2017MNRAS.469.3762W;ignore: same as 48
+Wang;10.1093/mnras/stx1090;0.5600;9.160000;0.140000;tomographic configuration-space analysis of galaxy autocorrelations in BOSS DR12;2017MNRAS.469.3762W;
+Wang;10.1093/mnras/sty2449;0.5200;9.056451;0.203059;tomographic analysis of galaxy clustering in BOSS DR12;2018MNRAS.481.3160W;
+Wang;10.1093/mnras/stx1090;0.5200;8.900000;0.120000;tomographic configuration-space analysis of galaxy autocorrelations in BOSS DR12;2017MNRAS.469.3762W;ignore: same as 42
+Wang;10.1093/mnras/stx1090;0.5200;8.900000;0.120000;tomographic configuration-space analysis of galaxy autocorrelations in BOSS DR12;2017MNRAS.469.3762W;
+Wang;10.1093/mnras/sty2449;0.4800;8.697712;0.189522;tomographic analysis of galaxy clustering in BOSS DR12;2018MNRAS.481.3160W;
+Wang;10.1093/mnras/stx1090;0.4800;8.640000;0.110000;tomographic configuration-space analysis of galaxy autocorrelations in BOSS DR12;2017MNRAS.469.3762W;ignore: same as 31
+Wang;10.1093/mnras/stx1090;0.4800;8.640000;0.110000;tomographic configuration-space analysis of galaxy autocorrelations in BOSS DR12;2017MNRAS.469.3762W;
+Wang;10.1093/mnras/sty2449;0.4400;8.054691;0.175985;tomographic analysis of galaxy clustering in BOSS DR12;2018MNRAS.481.3160W;
+Wang;10.1093/mnras/stx1090;0.4400;8.200000;0.130000;tomographic configuration-space analysis of galaxy autocorrelations in BOSS DR12;2017MNRAS.469.3762W;ignore: same as 25
+Wang;10.1093/mnras/stx1090;0.4400;8.200000;0.130000;tomographic configuration-space analysis of galaxy autocorrelations in BOSS DR12;2017MNRAS.469.3762W;
+Wang;10.1093/mnras/sty2449;0.4000;7.533505;0.216597;tomographic analysis of galaxy clustering in BOSS DR12;2018MNRAS.481.3160W;
+Wang;10.1093/mnras/stx1090;0.4000;7.700000;0.160000;tomographic configuration-space analysis of galaxy autocorrelations in BOSS DR12;2017MNRAS.469.3762W;ignore: same as 21
+Wang;10.1093/mnras/stx1090;0.4000;7.700000;0.160000;tomographic configuration-space analysis of galaxy autocorrelations in BOSS DR12;2017MNRAS.469.3762W;
+Wang;10.1093/mnras/sty2449;0.3600;6.937864;0.257209;tomographic analysis of galaxy clustering in BOSS DR12;2018MNRAS.481.3160W;
+Wang;10.1093/mnras/stx1090;0.3600;7.090000;0.160000;tomographic configuration-space analysis of galaxy autocorrelations in BOSS DR12;2017MNRAS.469.3762W;ignore: same as 12
+Wang;10.1093/mnras/stx1090;0.3600;7.090000;0.160000;tomographic configuration-space analysis of galaxy autocorrelations in BOSS DR12;2017MNRAS.469.3762W;
+Wang;10.1093/mnras/sty2449;0.3100;6.294842;0.196291;tomographic analysis of galaxy clustering in BOSS DR12;2018MNRAS.481.3160W;
+Wang;10.1093/mnras/stx1090;0.3100;6.290000;0.140000;tomographic configuration-space analysis of galaxy autocorrelations in BOSS DR12;2017MNRAS.469.3762W;ignore: same as 4
+Wang;10.1093/mnras/stx1090;0.3100;6.290000;0.140000;tomographic configuration-space analysis of galaxy autocorrelations in BOSS DR12;2017MNRAS.469.3762W;
+Zarrouk;10.1093/mnras/sty506;1.5200;12.518609;0.676682;clustering of 148659 quasars from eBOSS DR14 survey;2018MNRAS.477.1639Z;
+Zhao;10.1093/mnras/sty2845;1.9440;12.234267;0.991068;tomographic analysis of quasar clustering in eBOSS DR14;2019MNRAS.482.3497Z;
+Zhao;10.1093/mnras/sty2845;1.5260;11.968940;0.653607;tomographic analysis of quasar clustering in eBOSS DR14;2019MNRAS.482.3497Z;
+Zhao;10.1093/mnras/sty2845;1.2300;11.971038;1.080457;tomographic analysis of quasar clustering in eBOSS DR14;2019MNRAS.482.3497Z;
+Zhao;10.1093/mnras/sty2845;0.9780;10.733387;1.928069;tomographic analysis of quasar clustering in eBOSS DR14;2019MNRAS.482.3497Z;
+Zhao;10.1093/mnras/stw3199;0.6400;9.806484;0.384917;tomographic analysis of redshift-space distortion moments in BOSS DR12 galaxies;2017MNRAS.466..762Z;
+Zhao;10.1093/mnras/stw3199;0.5900;9.634696;0.227886;tomographic analysis of redshift-space distortion moments in BOSS DR12 galaxies;2017MNRAS.466..762Z;
+Zhao;10.1093/mnras/stw3199;0.5600;9.377758;0.207743;tomographic analysis of redshift-space distortion moments in BOSS DR12 galaxies;2017MNRAS.466..762Z;
+Zhao;10.1093/mnras/stw3199;0.5200;9.046501;0.198371;tomographic analysis of redshift-space distortion moments in BOSS DR12 galaxies;2017MNRAS.466..762Z;
+Zhao;10.1093/mnras/stw3199;0.4800;8.605862;0.181233;tomographic analysis of redshift-space distortion moments in BOSS DR12 galaxies;2017MNRAS.466..762Z;
+Zhao;10.1093/mnras/stw3199;0.4400;8.046433;0.160083;tomographic analysis of redshift-space distortion moments in BOSS DR12 galaxies;2017MNRAS.466..762Z;
+Zhao;10.1093/mnras/stw3199;0.4000;7.657642;0.240714;tomographic analysis of redshift-space distortion moments in BOSS DR12 galaxies;2017MNRAS.466..762Z;
+Zhao;10.1093/mnras/stw3199;0.3600;7.087045;0.238962;tomographic analysis of redshift-space distortion moments in BOSS DR12 galaxies;2017MNRAS.466..762Z;
+Zhao;10.1093/mnras/stw3199;0.3100;6.304454;0.273447;tomographic analysis of redshift-space distortion moments in BOSS DR12 galaxies;2017MNRAS.466..762Z;
+Zhu;10.1093/mnras/sty1955;2.2000;11.854615;0.539231;clustering of 147000 eBOSS DR14 quasars;2018MNRAS.480.1096Z;
+Zhu;10.1093/mnras/sty1955;2.0000;12.011098;0.561646;clustering of 147000 eBOSS DR14 quasars;2018MNRAS.480.1096Z;
+Zhu;10.1093/mnras/sty1955;1.5000;12.155907;0.736230;clustering of 147000 eBOSS DR14 quasars;2018MNRAS.480.1096Z;
+Zhu;10.1093/mnras/sty1955;1.0000;11.520503;1.031939;clustering of 147000 eBOSS DR14 quasars;2018MNRAS.480.1096Z;
+Zhu;10.1093/mnras/sty1955;0.8000;10.811867;1.142840;clustering of 147000 eBOSS DR14 quasars;2018MNRAS.480.1096Z;

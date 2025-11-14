@@ -1,0 +1,8 @@
+#You should cite these papers in any publication based on this pipeline.
+#../../outputs/run_cluster7_SN_BAO_corr_cheb/output_multinest.txt
+https://arxiv.org/abs/1201.2669
+http://arxiv.org/abs/1201.3654
+http://arxiv.org/abs/astro-ph/9911177
+https://arxiv.org/abs/1601.00115
+MNRAS 424 3 1647 (2012)
+New J Phys 9 12 444 (2007)

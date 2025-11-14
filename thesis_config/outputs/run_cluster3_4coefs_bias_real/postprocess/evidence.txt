@@ -1,0 +1,2 @@
+#logz logz_sigma data_set
+-55.049690586402306  0.1658791288322485  ../../outputs/run_cluster3_4coefs_bias_real/output_multinest.txt

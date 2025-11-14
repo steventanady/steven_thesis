@@ -9,23 +9,23 @@ def setup(options) :
 def execute (block, config) :
 
     # Comparing the data and theory result of the quantity used to test likelihood
-    data = block["scale_cuts_output","data"]
-    theory = block["scale_cuts_output","theory"]
-    cov = block["scale_cuts_output", "covariance"]
-    diff = data - theory
-    diff_frac = diff/data
-    diff_frac2 = diff/theory
-    output = np.column_stack((data,theory,diff,diff_frac,diff_frac2))
+    # data = block["scale_cuts_output","data"]
+    # theory = block["scale_cuts_output","theory"]
+    # cov = block["scale_cuts_output", "covariance"]
+    # diff = data - theory
+    # diff_frac = diff/data
+    # diff_frac2 = diff/theory
+    # output = np.column_stack((data,theory,diff,diff_frac,diff_frac2))
     # np.savetxt("cov60.txt", cov)
-    np.savetxt("data-theory_grad_des_new.txt",output, header = "data theory diff diff_frac diff_frac2")
+    # np.savetxt("data-theory_SN_BAO_QSO_Marie.txt",output, header = "data theory diff diff_frac diff_frac2")
     # np.savetxt("data_theta60.txt", data)
     # np.savetxt("theory60.txt", theory)
 
     # Generate output for power spectrum
     pm_lin = block["matter_power_lin","p_k"]
-    np.savetxt("pm_grad_des_new.txt",pm_lin)
+    np.savetxt("pm_lin_kids2.txt",pm_lin)
     # pm_nl = block["matter_power_nl","p_k"]
-    # np.savetxt("pm_nl_kids015.txt",pm_nl)
+    # np.savetxt("pm.txt",pm_nl)
 
     # Save matter power from camb
     # pm_lin = block["matter_power_lin","p_k"]
@@ -40,9 +40,9 @@ def execute (block, config) :
     #     for j in range(1,i+1) :
     #         name = f"bin_{i}_{j}"
     #         c_ell = block["shear_cl",name]
-    #         np.savetxt(f"c_ell_lcdm_{i}_{j}_60.txt",c_ell)
-    c_ell = block["shear_cl", "bin_5_5"]
-    np.savetxt("c_ell_grad_des_new.txt",c_ell)
+    #         np.savetxt(f"c_ell_lcdm_{i}_{j}.txt",c_ell)
+    # c_ell = block["shear_cl", "bin_5_5"]
+    # np.savetxt("c_ell_kids_lin55.txt",c_ell)
 
     # TEST
     # omch2 = block["cosmological_parameters","omch2"]

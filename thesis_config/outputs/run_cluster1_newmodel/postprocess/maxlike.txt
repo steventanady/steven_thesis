@@ -1,0 +1,8 @@
+#parameter maxlike data_set
+chebyshev_coefficients--c0  1.0424880836426196  ../../outputs/run_cluster1_newmodel/output_multinest.txt
+chebyshev_coefficients--c1  0.23211911966078302  ../../outputs/run_cluster1_newmodel/output_multinest.txt
+chebyshev_coefficients--c2  -0.5041489280873969  ../../outputs/run_cluster1_newmodel/output_multinest.txt
+prior  -2.890371757896165  ../../outputs/run_cluster1_newmodel/output_multinest.txt
+like  -47.57702972169135  ../../outputs/run_cluster1_newmodel/output_multinest.txt
+post  -50.467401479587515  ../../outputs/run_cluster1_newmodel/output_multinest.txt
+weight  9.862368629772047e-05  ../../outputs/run_cluster1_newmodel/output_multinest.txt

@@ -1,0 +1,16 @@
+#parameter lerr68 data_set
+uncorr_chebyshev_coefficients--c0  91.21248098523715  ../../outputs/run_cluster8_SN_BAO_CMB_QSO/output_multinest.txt
+uncorr_chebyshev_coefficients--c1  371.2508682321476  ../../outputs/run_cluster8_SN_BAO_CMB_QSO/output_multinest.txt
+cosmological_parameters--omch2  0.05876121319207311  ../../outputs/run_cluster8_SN_BAO_CMB_QSO/output_multinest.txt
+cosmological_parameters--ombh2  0.019820915916731106  ../../outputs/run_cluster8_SN_BAO_CMB_QSO/output_multinest.txt
+cosmological_parameters--s_8_input  0.6338754172315578  ../../outputs/run_cluster8_SN_BAO_CMB_QSO/output_multinest.txt
+intrinsic_alignment_parameters--a  -4.272467672466515  ../../outputs/run_cluster8_SN_BAO_CMB_QSO/output_multinest.txt
+nofz_shifts--uncorr_bias_1  -0.7952029573961091  ../../outputs/run_cluster8_SN_BAO_CMB_QSO/output_multinest.txt
+nofz_shifts--uncorr_bias_2  -0.9893915089872924  ../../outputs/run_cluster8_SN_BAO_CMB_QSO/output_multinest.txt
+nofz_shifts--uncorr_bias_3  -2.0519167979566526  ../../outputs/run_cluster8_SN_BAO_CMB_QSO/output_multinest.txt
+nofz_shifts--uncorr_bias_4  -2.2472918686064585  ../../outputs/run_cluster8_SN_BAO_CMB_QSO/output_multinest.txt
+nofz_shifts--uncorr_bias_5  0.23327841122989446  ../../outputs/run_cluster8_SN_BAO_CMB_QSO/output_multinest.txt
+prior  -6.3223449265119385  ../../outputs/run_cluster8_SN_BAO_CMB_QSO/output_multinest.txt
+like  -47.427059829143715  ../../outputs/run_cluster8_SN_BAO_CMB_QSO/output_multinest.txt
+post  -54.54154855622162  ../../outputs/run_cluster8_SN_BAO_CMB_QSO/output_multinest.txt
+weight  0.0018723436031610565  ../../outputs/run_cluster8_SN_BAO_CMB_QSO/output_multinest.txt
