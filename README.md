@@ -24,10 +24,10 @@ This repo contains CosmoSIS' original framework and my modifications to include 
 If you need to obtain the weight functions for different angular coverage, use the tools in https://github.com/KiDS-WL/Cat_to_Obs_K1000_P1.git and https://github.com/maricool/2pt_stats.git
 
 ## Installation
-Refer to https://cosmosis.readthedocs.io/en/latest/intro/installation.html for installing cosmosis
+Refer to https://cosmosis.readthedocs.io/en/latest/intro/installation.html for installing CosmoSIS
 
 ## Running the pipeline
-Before running the pipeline the cosmosis configuration must be done:
+Before running the pipeline the CosmoSIS configuration must be done:
 - conda activate ./env
 - source cosmosis-configure
 
