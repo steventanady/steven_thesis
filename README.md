@@ -16,18 +16,8 @@ This repo contains CosmoSIS' original framework and my modifications to include 
 │   └── outputs/                   # Output chains from CosmoSIS runs
 └── WnLog/                         # Precomputed COSEBIs weight functions
 ```
-
-The root directory contains:
-- `cosmosis-standard-library` contains the original code CosmoSIS library, with some modifications from me.
-- `KiDS-1000_cosebis_config_me` contains the original configuration from KiDS
-- `mod` contains some modules for model-independent analysis
-- `thesis_config` contains my configurationss
-- `WnLog` contains the calculated COSEBIs weight functions for theta covering (0.5, 300) and (60, 300). Use tools in https://github.com/KiDS-WL/Cat_to_Obs_K1000_P1.git and  https://github.com/maricool/2pt_stats.git to get a calculate the range that you want.
-
-Inside `thesis_config`:
-- `best_fit_values` contains best-fitting parameters from Nelder-Mead
-- `config` contains pipeline files
-- `evaluators` contains jupyter notebooks for various purposes
+`WnLog` contains only the weight functions for the angle coverage of (0.5, 300) and (60, 300). 
+If you need to obtain the weight functions for different angular coverage, use the tools in https://github.com/KiDS-WL/Cat_to_Obs_K1000_P1.git and https://github.com/maricool/2pt_stats.git
 
 ## Installation
 Refer to https://cosmosis.readthedocs.io/en/latest/intro/installation.html for installing cosmosis
