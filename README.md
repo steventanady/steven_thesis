@@ -7,11 +7,15 @@ This repo contains CosmoSIS' original framework and my modifications to include 
 ├── cosmosis-standard-library/     # CosmoSIS original library, with some modifications
 ├── KiDS-1000_cosebis_config_me/   # Original KiDS COSEBIs configuration
 ├── mod/                           # Modules for model-independent analysis
-├── thesis_config/                 
-│   ├── config/                    # Main pipeline .ini files for CosmoSIS
+├── thesis_config/              
+│   ├── config/                    
+│   │   ├── <pipeline>.ini         # Main pipeline files to be executed
+│   │   ├── <values>.ini           # Parameters in the pipeline
+│   │   ├── <priors>.ini           # Priors for the parameters
+│   │   ├── job.sh                 # Script for BwUnicluster
 │   │   ├── best_fit_values        # Best-fit values from Nelder-Mead
 │   │   ├── evaluators             # Jupyter notebooks for analysis            
-│   ├── inputs/                    # Input for the pipeline
+│   ├── inputs/                    # Inputs for the pipeline
 │   ├── kcap_modules/              # KiDS' kcap modules
 │   └── outputs/                   # Output chains from CosmoSIS runs
 └── WnLog/                         # Precomputed COSEBIs weight functions
