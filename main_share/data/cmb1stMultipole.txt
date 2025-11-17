@@ -1,6 +1,0 @@
-# Data point from CMB spectrum
-#
-# column 1: multipole moment of first peak l
-# column 2: uncertainty in multipole moment
-#
-2.220545230760086497e+02	9.059199490875359118e+01

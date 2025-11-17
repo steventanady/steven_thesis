@@ -44,13 +44,10 @@ def linear_evolution(block, config, a) :
         Dplus.append(dplus.D_plus(i))
     Dplus = np.array(Dplus)
     Dplus = Dplus/Dplus[0] # Re-Normalize it such that D+(z=6) = 1
-    # np.savetxt("dpl_many.txt", Dplus)
 
     pm = np.zeros((Dplus.shape[0],pm0.shape[0]))
     for i in range(0, Dplus.shape[0]) :
         pm[i] = pm0*Dplus[i]**2
-    np.savetxt("pm.txt", pm)
-    print(Dplus)
 
     return pm
 
@@ -82,7 +79,6 @@ def execute (block, config) :
         return 0
     
     pm = pm[::-1]
-    # np.savetxt("pkz2.txt",pm)
     block.put_grid("matter_power_lin", "z", z, "k_h", k_h, "p_k", pm)
 
     # Non-linear part, simply for the sake to run the pipeline

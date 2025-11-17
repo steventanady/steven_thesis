@@ -8,6 +8,7 @@ import numpy as np
 #  cosmological models
 #
 #  Matthias Bartelmann, U. Heidelberg, 2023
+# (Modified by Steven Tanady for model-independent expansion function)
 
 class Cosmology:
     ## Constructor with default arguments setting the density parameters and
