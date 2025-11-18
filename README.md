@@ -49,4 +49,3 @@ Modifications of parameters that enter the pipeline can be made in `<values>.ini
 After running the pipeline, the output is saved in `thesis_config/outputs/`. Go to the directory of the run (e.g. `thesis_config/outputs/run1`), copy `output_multinest.txt` and paste it to `thesis_config/config/tester/outputs/`. Use [`marginal_mode.ipynb`](thesis_config/config/evaluators/marginal_mode.ipynb) to obtain best-fitting values and uncertainties from the chain, and to plot the 2D parameter contours.
 
 You can obtain the (un)correlated Chebyshev coefficients using [`uncorr_cheb.ipynb`](thesis_config/config/evaluators/uncorr_cheb.ipynb), which uses Cholesky decomposition.
-w
