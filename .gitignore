@@ -5,3 +5,4 @@ mod/Testing/
 WnLog/test/
 thesis_config/config/output/
 thesis_config/config/tester/
+thesis_config/config/evaluators/uncorr_cheb_old.ipynb
