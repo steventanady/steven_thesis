@@ -64,7 +64,7 @@ def execute (block, config) :
     if np.any(np.isnan(pm)) :
         pm = np.ones_like(pm)
         block["distances", "pos_expf"] = False # Using the same flag to as negative expf to skip, but it doesn't really matter
-        print("NAN POWER SPECTRUM")
+        print("NAN POWER SPECTRUM ,SKIPPING THE FOLLWING MODULES AND ASSIGNING LOW LIKELIHOOD")
         block.put_grid("matter_power_lin", "z", z, "k_h", k_h, "p_k", pm)
         return 0
     

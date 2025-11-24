@@ -34,9 +34,6 @@ def linear_evolution(block, config, a) :
     pm0 = config["pm0"][-1,:]
     pm0 = np.array(pm0)
 
-    # zz = np.linspace(0,1100,25000)
-    # aa = 1/(1+zz)
-    # aa = aa[::-1]
     dplus = Growth_Factor (c,a,h0=h0,om=omega_m,n=exponent)
     
     Dplus = [] # array of D+
@@ -74,16 +71,11 @@ def execute (block, config) :
     if np.any(np.isnan(pm)) :
         pm = np.ones_like(pm)
         block["distances", "pos_expf"] = False
-        print("NAN POWER SPECTRUM")
+        print("NAN POWER SPECTRUM, SKIPPING THE FOLLOWING MODULES AND ASSIGNING LOW LIKELIHOOD")
         block.put_grid("matter_power_lin", "z", z, "k_h", k_h, "p_k", pm)
         return 0
     
     pm = pm[::-1]
     block.put_grid("matter_power_lin", "z", z, "k_h", k_h, "p_k", pm)
-
-    # Non-linear part, simply for the sake to run the pipeline
-    # pm_nl = pm
-    # pm_nl = np.zeros_like(pm)
-    # block.put_grid("matter_power_nl", "z", z, "k_h", k_h, "p_k", pm_nl)
 
     return 0
