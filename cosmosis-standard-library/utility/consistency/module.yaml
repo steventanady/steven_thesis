@@ -1,0 +1,170 @@
+#This is a template for module description files
+name: consistency
+version: '1.1'
+purpose: Deduce missing cosmological parameters and check consistency
+url: ''
+interface: consistency_interface.py
+attribution: [CosmoSIS Team]
+rules: Please maintain attribution.
+cite: []
+assumptions:
+-   LCDM parameterization
+-   'First pass: tries no assumptions'
+-   'Second pass: tries omega_nu=0'
+-   'Third pass: tries omega_nu=0 and omega_k=0'
+
+explanation: |
+    There are various ways of parameterizing cosmologies with different advantages
+    in different contexts.  This module takes a set of cosmological parameters and
+    tries to use them to deduce the remaining parameters.  For example, if you specify
+    ombh2 and h then it computes omega_b.  It has a fairly full set of relations to do this.
+
+    If you specify inconsistent parameters (e.g. omega values that do not add up to 1)
+    then an error status is returned.
+
+    You can set an option to also calculate the Hubble parameter from the CosmoMC theta
+    parameter, and vice versa.  This is off by default as it's a little slower.
+    It uses the camb code directly so should match up.
+
+    The standard set of relations is in consistency.py and relates the standard LCDM
+    parameters, including massive neutrinos.
+
+    It also converts log1e10As or A_s_1e9 to A_s, and (S_8, Omega_m) to (sigma_8, Omega_m).
+
+
+params:
+    verbose:
+        meaning: 'Whether to print how derived parameters were calculated and what assumptions used'
+        type: bool
+        default: false
+    cosmomc_theta:
+        meaning: 'Whether to add relations that calculate H0 from the CosmoMC theta parameter'
+        type: bool
+        default: false
+
+    relations_file:
+        meaning: >
+            Path to an alternative parameter relations file. Relations should be specified in
+            the form 'new_parameter=parameter_b*parameter_b' with one per line.
+        type: str
+        default:
+    extra_relations:
+        meaning: >
+            Extra relations to be added to the default list. Relations should be specified in
+            the form 'new_parameter=parameter_b*parameter_b,new_parameter2=parameter_d/parameter_e' 
+        type: str
+        default:
+
+inputs:
+    cosmological_parameters:
+        omega_m:
+            meaning: Matter density fraction of critical
+            type: real
+            default:
+        omega_b:
+            meaning: Baryon density fraction of critical
+            type: real
+            default:
+        omega_c:
+            meaning: CDM density fraction of critical
+            type: real
+            default:
+        omega_k:
+            meaning: Curvature pseudo-density fraction of critical
+            type: real
+            default:
+        omega_nu:
+            meaning: Massive neutrino density fraction of critical
+            type: real
+            default:
+        omega_lambda:
+            meaning: Dark energy density fraction of critical
+            type: real
+            default:
+        ommh2:
+            meaning: Physical density omega_m * h^2
+            type: real
+            default:
+        ombh2:
+            meaning: Physical density omega_b * h^2
+            type: real
+            default:
+        omch2:
+            meaning: Physical density omega_c * h^2
+            type: real
+            default:
+        omnuh2:
+            meaning: Physical density omega_nu * h^2
+            type: real
+            default:
+        baryon_fraction:
+            meaning: Ratio omega_b/omega_m
+            type: real
+            default:
+        hubble:
+            meaning: Hubble parameter H_0 in km/s/Mpc
+            type: real
+            default:
+        h0:
+            meaning: Dimensionless Hubble h = H_0 / 100 km/s/Mpc
+            type: real
+            default:
+        log1e10As:
+            meaning: log (10**10 * A_s) parameter. Ignored if not present
+            type: real
+            default:
+        A_s_1e9:
+            meaning:  10**9 * A_s parameter. Ignored if not present
+            type: real
+            default:
+        S_8:
+            meaning: sigma_8 * (omega_m/0.3)**0.5 parameter. Ignored if not present.
+            type: real
+            default:
+outputs:
+    cosmological_parameters:
+        omega_m:
+            meaning: Matter density fraction of critical
+            type: real
+        omega_b:
+            meaning: Baryon density fraction of critical
+            type: real
+        omega_c:
+            meaning: CDM density fraction of critical
+            type: real
+        omega_k:
+            meaning: Curvature pseudo-density fraction of critical
+            type: real
+        omega_nu:
+            meaning: Massive neutrino density fraction of critical
+            type: real
+        omega_lambda:
+            meaning: Dark energy density fraction of critical
+            type: real
+        ommh2:
+            meaning: Physical density omega_m * h^2
+            type: real
+        ombh2:
+            meaning: Physical density omega_b * h^2
+            type: real
+        omch2:
+            meaning: Physical density omega_c * h^2
+            type: real
+        omnuh2:
+            meaning: Physical density omega_nu * h^2
+            type: real
+        baryon_fraction:
+            meaning: Ratio omega_b/omega_m
+            type: real
+        hubble:
+            meaning: Hubble parameter H_0 in km/s/Mpc
+            type: real
+        h:
+            meaning: Dimensionless Hubble h = H_0 / 100 km/s/Mpc
+            type: real
+        A_s:
+            meaning: Amplitude of primordial fluctuations. Only if log1e10As or A_s_1e9 is present on input.
+            type: real
+        sigma_8:
+            meaning: RMS mass fluctuation in 8 Mpc/h spheres. Only if S_8 is present on input.
+            type: real

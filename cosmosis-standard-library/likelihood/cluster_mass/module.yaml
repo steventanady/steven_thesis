@@ -1,0 +1,36 @@
+name: Cluster_mass
+version: '1.0'
+purpose: Likelihood of z=1.59 Cluster mass from Santos et al. 2011
+url: ''
+interface: cluster_mass.py
+attribution: [Santos et al. 2011 (measurement), Harrison & Coles 2012, CosmoSIS team
+        (code)]
+rules: []
+cite:
+-   'Santos et al. 2011 '
+-   'Harrison & Coles 2012 '
+assumptions: []
+explanation: |
+    "This small module was written for CosmoSIS.
+        The Extreme Value statistics module (evs) should be run in the pipeline prior to this module.
+    "
+params:
+    mean:
+        meaning: Mass in M_sun/h
+        type: real
+        default:
+    sigma:
+        meaning: Error in M_sun/h
+        type: real
+        default:
+inputs:
+    clusters:
+        M_max:
+            meaning: Mass (M_sun/h)
+            type: real
+            default:
+outputs:
+    likelihoods:
+        MAXMASS_LIKE:
+            meaning: Gaussian likelihood value of supplied parameters
+            type: real

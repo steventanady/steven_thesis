@@ -1,0 +1,99 @@
+#This is a template for module description files
+name: smail
+version: 1
+purpose: Compute window functions for photometric n(z)
+url: ''
+interface: photometric_smail.py
+attribution: [Donnacha Kirk, Simon Samuroff, Jessica Muir]
+rules: You can do what you want with this file
+cite: []
+assumptions:
+-   Underlying true number density has Smail distribution
+-   Photometric errors are sigma(z) = sigma_0 (1+z)
+-   Bias fixed with redshift (if included)
+-   Galaxies evenly divided between bins
+
+explanation: >
+    This module takes inputs that specify the underlying spectroscopic (true) redshift
+    distribution of the galaxies in the survey.  It then convolves this with a photometric
+    error :math:`\sigma(z) = \sigma_0 (1+z)` and optionally biases it.  It computes bin edges in the
+    survey assuming equal numbers in each.
+    
+    You can also specify fixed bin edges.
+
+params:
+    nbin:
+        meaning: Number of redshift bins with equal number of gals in each
+        type: int
+        default:
+    zmin:
+        meaning: Minimum redshift to compute
+        type: real
+        default: 0.0
+    zmax:
+        meaning: Maximum redshift to compute
+        type: real
+        default: 4.0
+    dz:
+        meaning: Spacing of samples to compute n(z) at.
+        type: real
+        default: 0.01
+    enforce_equal_numbers:
+        meaning: No matter how n(z) gets divided, specify that each bin has equal number density
+        type: bool
+        default: F
+    z_edges:
+        meaning: >
+            Manually specified redshift bin edges. If nbin - 1 values passed,
+            these are the bounds of photometric selection for those nbin bins.
+            If 2 values are passed, they specify a minimum and maximum redshift between
+            which galaxies are divided into equal number samples.
+        type: real 1d
+        default: None
+    
+inputs:
+    number_density_params:
+        alpha:
+            meaning: Smail distribution parameter. n(z) = z^{alpha} exp{-(z/z0)^beta}
+            type: real
+            default:
+        beta:
+            meaning: Smail distribution parameter
+            type: real
+            default:
+        z0:
+            meaning: Smail distribution parameter
+            type: real
+            default:
+        sigz:
+            meaning: Photometric error at z=0
+            type: real
+            default:
+        ngal:
+            meaning: Total number density of galaxies per square arcmin
+            type: real
+            default:
+        bias:
+            meaning: Bias on all photometric measurements
+            type: real
+            default:
+outputs:
+    wl_number_density:
+        nz:
+            meaning: Number of redshift samples
+            type: int
+        nbin:
+            meaning: Number of bins
+            type: int
+        z:
+            meaning: Redshift sample values
+            type: real 1d
+        bin_{i}:
+            meaning: n(z) at redshift sample values.  bin_1, bin_2, ...
+            type: real 1d
+        edge_{i}:
+            meaning: The nominal edges of the redshift bins (i.e. edges if no photometric errors)
+            type: real 1d
+        ngal_{i}:
+            meaning: number density of redshift bin i
+            type: real

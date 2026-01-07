@@ -1,0 +1,92 @@
+name: Extreme_Value_Statistics
+version: 1.0
+purpose: PDF of the maximum cluster mass given cosmological parameters
+url: ''
+interface: cluster_evs.py
+attribution: [Harrison & Coles 2012, CosmoSIS team (code)]
+rules: None.
+cite:
+-   Harrison and Coles, MNRAS 421 2012
+assumptions:
+-   FRW cosmological model
+explanation: |
+    Computes the likelihood of the largest observed cluster near
+    the specified redshift range being M_max, as loaded from the datablock, 
+    given the mass function.
+
+    Requires the mass function calculated from M_min to M_max, for example 
+    by mf_tinker module, run withwith redshift_zero=0 to generate dndlnm. 
+
+    Optionally, can also generate a full PDF with output_pdf=T
+    "
+params:
+    redshift:
+        meaning: 'Output z of cluster where integration limits: zmin = z - 0.02, zmax
+            = z + 0.02'
+        type: real
+        default:
+    output_pdf:
+        meaning: If True, output PDF for range of masses, only recommended for test
+            runs
+        type: bool
+        default: false
+    frac:
+        meaning: Fraction of the sky observed between zmin and zmax
+        type: real
+        default: 1.0
+    M_min:
+        meaning: Minimum mass for PDF in M_sun/h
+        type: real
+        default: 1.0E14
+    M_max:
+        meaning: Maximum mass for PDF in M_sun/h
+        type: real
+        default: 2.0E15
+    n_m:
+        meaning: Number of log-spaced masses for PDF
+        type: int
+        default: 100
+inputs:
+    cosmological_parameters:
+        h0:
+            meaning: Hubble parameter H0/(100 km/s/Mpc)
+            type: real
+            default:
+        omega_m:
+            meaning: Omega matter
+            type: real
+            default:
+    distances:
+        z:
+            meaning: Redshifts
+            type: real 1d
+            default:
+        d_a:
+            meaning: Angular diameter distance as a function of z
+            type: real
+            default:
+    mass_function:
+        z:
+            meaning: Redshifts
+            type: real 1d
+            default:
+        r_h:
+            meaning: Radii (Mpc/h)
+            type: real 1d
+            default:
+        dndlnmh:
+            meaning: Mass function (h^3 Mpc^-3)
+            type: real 1d
+            default:
+outputs:
+    evs:
+        m:
+            meaning: Mass (M_sun/h) (if output_pdf=True)
+            type: real 1d
+        logphi:
+            meaning: Log of PDF (if output_pdf=True)
+            type: real 1d
+    likelihoods:
+        evs_like:
+            meaning: Likelihood of M_max
+            type: real

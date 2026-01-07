@@ -1,0 +1,38 @@
+#This is a template for module description files
+name: balmes
+version: 1
+purpose: ''
+url: ''
+interface: balmes.py
+attribution: [I. Balmes & P.S. Corasaniti]
+rules: Please cite the relevant papers if you use this module.
+cite:
+-   'arXiv:1206.5801 '
+
+assumptions:
+-   Strong lensing modelling details
+
+explanation: |
+    "
+    Balmes & Corasaniti measured H0 using strong lensing systems.
+
+    This module uses a likelihood tabulated from their paper.
+     "
+params:
+    data_file:
+        meaning: Dir for data files. Data file containing 2 columns H0 and P. You
+            should use the file taken from arXiv:1206.5801 and provided in CosmoSIS
+            under the name balmes.txt unless you want to use a different dataset
+        type: str
+        default: modue_dir/balmes.txt
+inputs:
+    cosmological_parameters:
+        h0:
+            meaning: Hubble parameter/100 km/s/Mpc
+            type: real
+            default:
+outputs:
+    likelihoods:
+        balmes_sl_like:
+            meaning: Likelihood of this strong lensing system given h0
+            type: real 1d

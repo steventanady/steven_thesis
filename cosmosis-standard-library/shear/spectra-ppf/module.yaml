@@ -1,0 +1,123 @@
+#This is a template for module description files
+name: wl_spectra_ppf
+version: '1.0'
+purpose: Compute weak lensing C_ell from P(k,z) and MG D(k,z) with the Limber integral
+url: ''
+interface: interface.so
+attribution: [CosmoSIS team, Matt Becker]
+rules: ''
+cite: []
+assumptions:
+-   The Limber integral is valid on the scales in question
+
+explanation: >
+    DEPRECATED: You should use the module cosmosis-standard-library/structure/projection_ppf/project_2d_ppf.py instead.
+
+    This variant of the wl_spectra module includes modified gravity
+    via the phenomenological D(k,z) which modifies the lensing kernel.
+    Compare equations 33 and 34 of http://arxiv.org/pdf/1109.4583v3.pdf
+
+    Intrinsic alignments under modified gravity are not correctly
+    supported; please use intrinsic_alignments=F
+
+
+    The Limber approximation integrates a 3D power spectrum over the radial
+    direction to get a 2D angular power spectrum.  It is an approximation 
+    which is only valid on smaller scales.
+
+    :math:`C_\ell =  A \int_0^{\chi_1} W_1(\chi) W_2(\chi) P(k=l/\chi, z(\chi)) / \chi^2 d\chi`
+
+
+    The full integral must integrate over k(\ell) also.
+
+    For weak lensing, the power spectrum is the matter power spectrum and the two
+    kernel functions W depend on the redshift bins being used and the geometry.
+
+    Parts of this code and the underlying implementation of limber are based on cosmocalc:
+    https://bitbucket.org/beckermr/cosmocalc-public
+
+params:
+    n_ell:
+        meaning: Number of log-spaced ell values to compute
+        type: int
+        default:
+    ell_min:
+        meaning: Minimum ell value to compute
+        type: real
+        default:
+    ell_max:
+        meaning: Maximum ell value to compute
+        type: real
+        default:
+inputs:
+    modified_gravity:
+        k_h:
+            meaning: Wavenumber k/h sample points for D(k,z)
+            type: real 1d
+            default:
+        z:
+            meaning: Redshift sample points for D(k,z)
+            type: real 1d
+            default:
+        D:
+            meaning: D(k,z) values at sample points
+            type: real 2d
+            default:
+    cosmological_parameters:
+        omega_m:
+            meaning: Density fraction of all matter; used in the prefactor
+            type: real
+            default:
+        h0:
+            meaning: Hubble factor H0 / 100 km/s/Mpc.
+            type: real
+            default:
+    distances:
+        z:
+            meaning: Redshift values of distance samples
+            type: real 1d
+            default:
+        d_m:
+            meaning: Comoving distnace to redshift values in units of Mpc (no factor
+                h)
+            type: real 1d
+            default:
+    matter_power_nl:
+        z:
+            meaning: Redshift values of P(k,z) samples
+            type: real 1d
+            default:
+        k_h:
+            meaning: Wavenumber k values of P(k,z) samples in units of Mpc/h
+            type: real 1d
+            default:
+        P_k:
+            meaning: Non-linear matter power spectrum at samples in (Mpc/h)^{-3}
+            type: real 2d
+            default:
+    wl_number_density:
+        nbin:
+            meaning: Number of redshift bins
+            type: int
+            default:
+        z:
+            meaning: Redshift values of n(z) samples
+            type: real 1d
+            default:
+        bin_{i}:
+            meaning: Bin n(z) values.  Need not be normalized. bin_1,
+                bin_2, bin_3, ....
+            type: real 1d
+            default:
+outputs:
+    shear_cl:
+        ell:
+            meaning: Sample ell values for output C_ell
+            type: int 1d
+        nbin:
+            meaning: Number of redshift bins used
+            type: int
+        bin_{i}_{j}:
+            meaning: C_ell (no l(l+1) factor) for (auto-correlation) bin i and j.
+                Only stores j<=i.
+            type: real 1d
