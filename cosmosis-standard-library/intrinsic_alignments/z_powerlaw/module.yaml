@@ -1,0 +1,88 @@
+name: ia_z_powerlaw
+version: '2.0'
+purpose: 'Add redshift dependence to IA model'
+url: ''
+interface: ia_z_powerlaw.py
+attribution: [CosmoSIS team, Niall Maccrann]
+rules: ''
+cite: []
+assumptions:
+-   Modify the intrinsic alignment power spectra to have a power-law dependence in
+    (1+z)
+
+explanation: |
+    "
+    Basic models of intrinsic alignments assume a specific simple evolution with redshift.
+    This module takes an existing model of the IA power spectra and modifies them by giving
+    them additional evolution in z.
+
+    Specifically, it takes P_II and P_GI (e.g. as calculated by the la_model module)
+    and modifies them to:
+
+    :math:`P_{II}(k,z) -> (1+z)^\alpha P_{II}(k,z)`
+
+    :math:`P_{GI}(k,z) -> (1+z)^\alpha P_{GI}(k,z)`
+
+    "
+params:
+    name:
+        meaning: A suffix to use for the input/output sections
+        type: str
+        default:
+inputs:
+    intrinsic_alignment_parameters:
+        alpha:
+            meaning: Power law index to apply.
+            type: real
+            default:
+    intrinsic_power:
+        k_h:
+            meaning: Wavenumber k values of P(k,z) samples in units of Mpc/h
+            type: real 1d
+            default:
+        z:
+            meaning: Redshift values of P(k,z) samples
+            type: real 1d
+            default:
+        P_K:
+            meaning: Spectrum of intrinsic-intrinsic power at samples in (Mpc/h)^{-3}
+            type: real 2d
+            default:
+    matter_intrinsic_power:
+        k_h:
+            meaning: Wavenumber k values of P(k,z) samples in units of Mpc/h
+            type: real 1d
+            default:
+        z:
+            meaning: Array; redshift values of P(k,z) samples
+            type: real 1d
+            default:
+        P_K:
+            meaning: Spectrum of matter-intrinsic cross-power at samples in (Mpc/h)^{-3}
+            type: real 2d
+            default:
+outputs:
+    intrinsic_power:
+        k_h:
+            meaning: Wavenumber k values of P(k,z) samples in units of Mpc/h (unchanged from
+                input)
+            type: real 1d
+        z:
+            meaning: Redshift values of P(k,z) samples (unchanged from input)
+            type: real 1d
+        P_K:
+            meaning: ; updated spectrum of intrinsic-intrinsic power at samples in
+                (Mpc/h)^{-3}
+            type: real 2d
+    matter_intrinsic_power:
+        k_h:
+            meaning: Wavenumber k values of P(k,z) samples in units of Mpc/h (unchanged from
+                input)
+            type: real 1d
+        z:
+            meaning: Redshift values of P(k,z) samples (unchanged from input)
+            type: real 1d
+        P_K:
+            meaning: Updated spectrum of matter-intrinsic cross-power at samples
+                in (Mpc/h)^{-3}
+            type: real 2d

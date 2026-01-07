@@ -1,0 +1,93 @@
+#This is a template for module description files
+name: no_bias
+version: 1
+purpose: Generate galaxy power P(k) as though galaxies were unbiased DM tracers
+url: ''
+interface: no_bias.py
+attribution: [CosmoSIS Team]
+rules: []
+cite: []
+assumptions:
+-   Unit galaxy bias; at all scales and redshifts galaxies perfectly trace dark matter
+
+explanation: |
+    "Galaxy bias relates the distribution of galaxies to the underlying (dark) matter
+    field whose skeleton they trace.
+
+    The matter power spectrum of galaxies is related to that of matter by a bias:
+
+    P_gal(k,z) = b(k,z,...) P_m(k,z)
+
+    where the most general bias is a function of wavenumber k, redshift z, galaxy type,
+    and a whole host of other values.  Realistic bias models can be complicated; the purpose
+    of this module is to act as a placeholder, usually when testing pipelines or forecasting.
+
+    In this module, b=1.  It generates the galaxy power and
+    matter-galaxy cross-power from the non-linear power spectrum, just by copying them.
+
+    This can be useful if you plan to apply a more complicated bias model to calculated
+    observables later, for example.
+
+    Optionally, if it finds you have generated the matter-intrinsic alignment cross-power,
+    it will calculate the galaxy-intrinsic cross power from it.
+    "
+params: {}
+inputs:
+    matter_power_nl:
+        k_h:
+            meaning: Wavenumber in h/Mpc of NL matter power
+            type: real 1d
+            default:
+        z:
+            meaning: Redshift of NL matter power
+            type: real 1d
+            default:
+        P_k:
+            meaning: Nonlinear matter power
+            type: real 2d
+            default:
+    matter_intrinsic_power:
+        k_h:
+            meaning: Wavenumber in h/Mpc of matter-intrinsic power (optional)
+            type: real 1d
+            default:
+        z:
+            meaning: Optional, redshift
+            type: real 1d
+            default:
+        P_k:
+            meaning: Optional, nonlinear matter power
+            type: real 2d
+            default:
+outputs:
+    galaxy_power:
+        k_h:
+            meaning: Wavenumber in h/Mpc
+            type: real 1d
+        z:
+            meaning: Redshift
+            type: real 1d
+        P_k:
+            meaning: Galaxy power
+            type: real 2d
+    matter_galaxy_power:
+        k_h:
+            meaning: Wavenumber in h/Mpc
+            type: real 1d
+        z:
+            meaning: Redshift
+            type: real 1d
+        P_k:
+            meaning: Matter-galaxy cross power
+            type: real 2d
+    galaxy_intrinsic_power:
+        k_h:
+            meaning: Only if matter_intrinsic_power found, wavenumber in h/Mpc
+            type: real 1d
+        z:
+            meaning: Only if matter_intrinsic_power found, optional, redshift
+            type: real 1d
+        P_k:
+            meaning: Only if matter_intrinsic_power found, optional, nonlinear matter
+                power
+            type: real 2d

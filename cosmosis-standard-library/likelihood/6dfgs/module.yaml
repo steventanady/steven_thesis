@@ -1,0 +1,94 @@
+#This is a template for module description files
+name: 6dFGS
+version: ''
+purpose: Compute the likelihood of supplied D_v or fsigma8(z=0.067)
+url: ''
+interface: 6dfgs_rsd.py
+attribution: [6dFGS Team]
+rules: ''
+cite:
+-   BAO MNRAS 416, 3017 3032 (2011)
+-   fsigma8 MMNRAS 423, 3430 3444 (2012)
+assumptions:
+-   6dFGS dataset
+
+explanation: >
+    ""
+params:
+    feedback:
+        meaning: Whether to print feedback
+        type: bool
+        default: False
+    bao_like:
+        meaning: Whether to use BAO likelihood
+        type: bool
+        default: True
+    rsd_like:
+        meaning: Whether to use RSD likelihood
+        type: bool
+        default: False
+    bao_mode:
+        meaning: Set to "dv" to use the measurement of D_v or to "rs_dv" to use the ratio r_s/D_v
+        type: str
+        default: rs_dv
+    mean:
+        meaning: Dv for mode 0 or fsigma8 for mode 1
+        type: real
+        default: 457.0 or 0.423
+    sigma:
+        meaning: Sigma_Dv for mode 0 or sigma_fsigma8
+        type: real
+        default: 27.0 or 0.055
+    redshift:
+        meaning: Redshift of measurements, depending on mode
+        type: real
+        default: 0.106 or 0.067
+inputs:
+    growth_parameters:
+        d_z:
+            meaning: Linear growth factor D(z)
+            type: real 1d
+            default:
+        f_z:
+            meaning: Linear growth rate f(z)
+            type: real 1d
+            default:
+        z:
+            meaning: Redshift of samples
+            type: real 1d
+            default:
+    cosmological_parameters:
+        omega_m:
+            meaning: Baryon + cdm density fraction today
+            type: real
+            default:
+        sigma_8:
+            meaning: Amplitude of linear matter power at 8/h Mpc at z=0
+            type: real
+            default:
+        bias:
+            meaning: Galaxy bias
+            type: real
+            default:
+        h0:
+            meaning: Hubble parameter H0/(100 km/s/Mpc)
+            type: real
+            default:
+    distances:
+        z:
+            meaning: Redshifts of samples
+            type: real 1d
+            default:
+        d_m:
+            meaning: Physical angular diameter distance in Mpc
+            type: real 1d
+            default:
+        h:
+            meaning: Hubble parameter with in units of Mpc
+            type: real 1d
+            default:
+outputs:
+    likelihoods:
+        6dfgs_LIKE:
+            meaning: Likelihood of supplied Dv(z=0.106) or fsigma8(z=0.067)
+            type: real

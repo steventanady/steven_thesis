@@ -1,0 +1,82 @@
+name: sigma_r
+version: 1.0
+purpose: Compute anisotropy dispersion sigma(R,z)
+url: ''
+interface: sigmar.py
+attribution: [Scott Dodelson]
+rules: ''
+cite: []
+assumptions:
+-   minimal assumptions; sigma computed directly from P(k,z)
+
+explanation: |
+    "sigma(R,z) is the variance of cosmic density fluctuations on scales
+    down to 8 Mpc/h.
+
+    In Fourier space is given by sigma(R,z) = \int_0^\infty W^2(k R) k^2 P(k,z) / (2 \pi)^2 dk
+
+    The P(k,z) used could in general be linear or non-linear, but usually when people
+    say sigma they mean the non-linear variant.
+    "
+params:
+    zmin:
+        meaning: Minimum redshift to generate values for
+        type: real
+        default:
+    zmax:
+        meaning: Maximum redshift to generate values for
+        type: real
+        default:
+    dz:
+        meaning: Output redshift sample spacing
+        type: real
+        default:
+    rmin:
+        meaning: Minimum scale R in Mpc/h to generate values for
+        type: real
+        default:
+    rmax:
+        meaning: Maximum scale R in Mpc/h to generate values for
+        type: real
+        default:
+    dr:
+        meaning: Scale R spacing
+        type: real
+        default:
+    matter_power:
+        meaning: Name of section to get P(k,z) from, e.g. matter_power_lin, matter_power_nl
+        type: str
+        default: matter_power_lin
+    crop_klim:
+        meaning: Crops the klimits of the sigma integral to max(0.01/R, kmin), min(100/R,
+            kmax)
+        type: bool
+        default: true
+inputs:
+    matter_power_lin:
+        k_h:
+            meaning: Sample values of linear spectrum in Mpc/h.  Section name specified
+                by parameter in ini file.
+            type: real 1d
+            default:
+        z:
+            meaning: Redshift of linear spectrum samples.  Section name specified
+                by parameter in ini file.
+            type: real 1d
+            default:
+        P_k:
+            meaning: Linear spectrum in (Mpc/h)^{-3}.  Section name specified by parameter
+                in ini file.
+            type: real 2d
+            default:
+outputs:
+    sigmar:
+        R:
+            meaning: Scale R of output in Mpc/h
+            type: real 1d
+        z:
+            meaning: Redshift of output
+            type: real 1d
+        sigma2:
+            meaning: Variance sigma^2(R,z)
+            type: real 2d

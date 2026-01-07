@@ -1,0 +1,128 @@
+#This is a template for module description files
+name: clerkin
+version: 1
+purpose: Compute galaxy bias as function of k, z for 3-parameter Clerkin et al 2014
+    model
+url: ''
+interface: clerkin_interface.py
+attribution: [L. Clerkin]
+rules: Please cite the relevant papers if you use this module.
+cite:
+-   arXiv:1405.5521
+-   "Cole et al, MNRAS, 362, 2, 505\u2013534"
+
+assumptions:
+-   3-parameter bias model from Clerkin et al l 2014
+
+explanation: |
+    The GTD bias model provides a benchmark expression for 
+    the redshift evolution of galaxy bias on large scales. 
+    This is crucial for rigorous comparison or combination 
+    of results. Choice of biasing model has a significant 
+    impact on cosmological parameter constraints, and an 
+    incorrect bias model will cause a shift in measured 
+    values of cosmological parameters. The three parameter 
+    GTD model, which encompasses several common bias models, 
+    has been shown to outperform the popular approach of a 
+    binned constant bias in obtaining unbiased estimates of 
+    cosmological parameters.
+
+    The GTD model is:
+
+    :math:`b(z) = c + (b_0 - c) / D(z)^\alpha`
+
+    where D(z) is the growth factor.
+
+    The Q model is:
+    
+    :math:`b(k) = (1+Q k^2) / (a+A k)`
+     
+    This module creates bias fields and/or scales power spectra, 
+    depending on the chosen  options
+
+    The version of this model without redshift dependence is from Cole et al.
+
+params:
+    bias_only:
+        meaning: ) If set, do not use the matter power spectrum, just save the bias
+            field
+        type: bool
+        default: false
+    model:
+        meaning: "Model choice. gtd, q, or q-gtd to use the GTD three-parameter model (z evolution\
+            \ only), the 2-parameter Q model (k scale only), or both"
+        type: str
+        default: gtd
+    suffix:
+        meaning: A suffix to append to the output section names below
+        type: str
+        default: "''"
+inputs:
+    galaxy_bias:
+        b0:
+            meaning: Bias at z=0 if GTD model used
+            type: real
+            default:
+        c:
+            meaning: Bias parameter for GTD model
+            type: real
+            default:
+        alpha:
+            meaning: Power law index for growth in GTD model
+            type: real
+            default:
+        Q:
+            meaning: Numerator parameter in Q model
+            type: real
+            default:
+        A:
+            meaning: Denominator parameter in Q model
+            type: real
+            default:
+    matter_power_nl:
+        k_h:
+            meaning: Wavenumber in h/Mpc only if mode=power or both
+            type: real 1d
+            default:
+        z:
+            meaning: Redshift only if mode=power or both
+            type: real 1d
+            default:
+        P_k:
+            meaning: Nonlinear matter power only if mode=power or both
+            type: real 2d
+            default:
+outputs:
+    galaxy_power:
+        k_h:
+            meaning: Wavenumber in h/Mpc, only if bias_only=F
+            type: real 1d
+        z:
+            meaning: Redshift, only if bias_only=F
+            type: real 1d
+        P_k:
+            meaning: Galaxy power, only if bias_only=F
+            type: real 2d
+    matter_galaxy_power:
+        k_h:
+            meaning: Wavenumber in h/Mpc, only if bias_only=F
+            type: real 1d
+        z:
+            meaning: Redshift, only if bias_only=F
+            type: real 1d
+        P_k:
+            meaning: Matter-galaxy cross power, only if bias_only=F
+            type: real 2d
+    bias_field:
+        k_h:
+            meaning: Wavenumber samples in h/Mpc of bias b(k, z)
+            type: real 1d
+        z:
+            meaning: Redshift samples
+            type: real 1d
+        b:
+            meaning: Galaxy bias b(k, z)
+            type: real 2d
+        r:
+            meaning: Stochastic bias r(k, z); identically 1 for these models.
+            type: real 2d

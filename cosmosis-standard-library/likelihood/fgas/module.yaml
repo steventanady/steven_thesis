@@ -1,0 +1,130 @@
+name: fgas
+version: '2014'
+purpose: Likelihood of galaxy cluster gas-mass fractions
+url: http://www.slac.stanford.edu/~amantz/work/fgas14/
+interface: fgas.so
+attribution: [Adam Mantz]
+rules: MIT license
+cite:
+-   Mantz et al., MNRAS, 440:2077 (2014)
+-   http://arxiv.org/abs/1402.6212
+assumptions: ''
+explanation: |
+    Cluster gas mass fractions are a standard quantity whose value is related
+    to the cosmic baryon mass fraction and whose apparent evolution depends
+    on the expansion of the Universe.
+params:
+    numdatasets:
+        meaning: Number of fgas data tables
+        type: int
+        default: 0
+    dataset{N}:
+        meaning: Path to each data file, with N=1,2,...
+        type: str
+        default:
+    cl_cal_mean:
+        meaning: Mean of a Gaussian prior to be applied to the fgas calibration nuisance
+            parameter. This will be deprecated once the gravitational lensing data
+            that we use to direcly constrain this parameter are included in a future
+            version.
+        type: real
+        default: 0.90
+    cl_cal_sd:
+        meaning: Standard deviation of a Gaussian prior to be applied to the fgas
+            calibration nuisance parameter. This will be deprecated once the gravitational
+            lensing data that we use to direcly constrain this parameter are included
+            in a future version.
+        type: real
+        default: 0.09
+    fgas_rslope_mean:
+        meaning: Mean of a Gaussian prior to be applied to the power-law slope of
+            the cluster fgas profile.
+        type: real
+        default: 0.442
+    fgas_rslope_sd:
+        meaning: Standard deviation of a Gaussian prior to be applied to the power-law
+            slope of the cluster fgas profile.
+        type: real
+        default: 0.035
+    cl_lenssys_mean:
+        meaning: Mean of a Gaussian prior to be applied to the weak lensing calibration
+            nuisance parameter.
+        type: real
+        default: 1.000
+    cl_lenssys_sd:
+        meaning: Standard deviation of a Gaussian prior to be applied to the weak
+            lensing calibration nuisance parameter.
+        type: real
+        default: 0.069
+inputs:
+    cosmological_parameters:
+        baryon_fraction:
+            meaning: Cosmic baryon mass fraction
+            type: real
+            default:
+        yhe:
+            meaning: Primordial helium mass fraction
+            type: real
+            default:
+    distances:
+        z:
+            meaning: Redshift
+            type: real 1d
+            default:
+        D_A:
+            meaning: Angular diameter distance
+            type: real 1d
+            default:
+        D_L:
+            meaning: Luminosity distance
+            type: real 1d
+            default:
+        H:
+            meaning: Hubble parameter
+            type: real 1d
+            default:
+    fgas:
+        U_gas_0:
+            meaning: Redshift-zero value of fgas, normalized to the cosmic baryon
+                fraction
+            type: real
+            default:
+        U_gas_1:
+            meaning: Linear-with-redshift evolution of fgas
+            type: real
+            default:
+        fgas_scatter:
+            meaning: Log-normal intrinsic scatter in fgas
+            type: real
+            default:
+        fgas_rslope:
+            meaning: Power-law slope of the cluster fgas profile
+            type: real
+            default:
+        cl_cal:
+            meaning: Calibration nuisance parameter
+            type: real
+            default:
+        cl_calev:
+            meaning: Linear-in-redshift evolution of the calibration
+            type: real
+            default:
+        cl_calscat:
+            meaning: Intrinsic scatter in the calibration (e.g. due to non-thermal
+                pressure)
+            type: real
+            default:
+        cl_lenssys:
+            meaning: Nuisance parameter for weak graviational lensing masses
+            type: real
+            default:
+        cl_lnMwl_{N}:
+            meaning: With N=1,2,...,12 log masses for the clusters where we have gravitational
+                lensing data
+            type: real
+            default:
+outputs:
+    likelihoods:
+        fgas_like:
+            meaning: Likelihood of the galaxy cluster gas-mass fractions
+            type: real

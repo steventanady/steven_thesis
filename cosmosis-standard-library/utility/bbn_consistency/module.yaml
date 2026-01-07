@@ -1,0 +1,59 @@
+#This is a template for module description files
+name: BBN-Consistency
+version: '0705.0290'
+purpose: Compute consistent Helium fraction from baryon density given BBN
+url: http://parthenope.na.infn.it/
+interface: bbn_consistency.py
+attribution: [CosmoSIS Team]
+rules: []
+cite: ['Comp.Phys.Commun.178:956-971,2008']
+assumptions:
+-   Standard Big Bang Nucleosynthesis
+-   ombh2 within the range of the input data
+
+explanation: |
+    "
+    The Big Bang Nucleosynthesis model describes how the 
+    light elements were generated in the primordial universe.  For a given
+    value of Omega_b h**2 and number of neutrinos the theory can predict
+    the helium abundance.
+
+    This module sets the helium mass fraction (YHe) from the mean baryon density (ombh2)
+    and number of neutrinos (delta_neff), based on a table interpolation from those calculations.
+
+    This module should go into the pipeline after consistency and
+    before any physics modules. It's effectively an optional consistency module.
+
+    "
+params:
+    data:
+        meaning: Filename for ombh2,DeltaN,YHe data. ( file)
+        type: str
+        default: included
+    input_name:
+        default: delta_neff
+        type: str
+        meaning: Which parameter to start from, either massless_nu or delta_neff
+inputs:
+    cosmological_parameters:
+        ombh2:
+            meaning: Physical matter density parameter
+            type: real
+            default:
+        delta_neff:
+            meaning: Extra contribution to neutrino number density (if input_name == delta_neff)
+            type: real
+            default: 0.0
+        massive_nu:
+            meaning: Effective number of massive neutrinos (if input_name == massless_nu)
+            type: real
+            default:
+        massless_nu:
+            meaning: Number of massless neutrinos (if input_name == massless_nu)
+            type: int
+            default:
+outputs:
+    cosmological_parameters:
+        yhe:
+            meaning: Cosmological helium fraction
+            type: real

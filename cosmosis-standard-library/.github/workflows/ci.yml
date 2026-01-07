@@ -1,0 +1,277 @@
+# This workflow will install Python dependencies, run tests and lint with a variety of Python versions
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
+
+name: Continuous Integration
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+
+jobs:
+
+  Download_Data:
+    name: Download test data
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - uses: actions/cache@v3
+        name: Planck Data Cache
+        id: cache-planck
+        with:
+          path: COM_Likelihood_Data-baseline_R3.00.tar.gz
+          key: planck-2018-data
+          enableCrossOsArchive: true
+  
+      - if: ${{ steps.cache-planck.outputs.cache-hit != 'true' }}
+        name: Download Planck
+        shell: bash -l {0}
+        run: |
+          URL="https://portal.nersc.gov/cfs/lsst/zuntz/planck/COM_Likelihood_Data-baseline_R3.00.tar.gz"
+          FILENAME="COM_Likelihood_Data-baseline_R3.00.tar.gz"
+          wget -O ${FILENAME} ${URL}
+        
+      - name: Cache WMAP data
+        id: cache-wmap
+        uses: actions/cache@v3
+        with:
+          path: wmap_likelihood_full_v5.tar.gz
+          key: wmap-9-data
+          enableCrossOsArchive: true
+          
+      - if: ${{ steps.cache-wmap.outputs.cache-hit != 'true' }}
+        name: Download WMAP data
+        run:  |
+          wget https://lambda.gsfc.nasa.gov/data/map/dr5/dcp/likelihood/wmap_likelihood_full_v5.tar.gz
+
+      - name: Cache ACT data
+        id: cache-act
+        uses: actions/cache@v3
+        with:
+          path: ACT_dr6_likelihood_v1.1.tgz
+          key: act-dr6-data
+          enableCrossOsArchive: true
+          
+      - if: ${{ steps.cache-act.outputs.cache-hit != 'true' }}
+        name: Download ACT data
+        run:  |
+          wget https://lambda.gsfc.nasa.gov/data/suborbital/ACT/ACT_dr6/likelihood/data/ACT_dr6_likelihood_v1.1.tgz
+
+
+
+
+  conda_test:
+    name: Conda Test
+    needs: Download_Data
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-20.04, macos-latest]
+        pyversion: ["3.8", "3.9", "3.10", "3.11"]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - uses: conda-incubator/setup-miniconda@v2
+        with:
+          activate-environment: cosmosis-env
+          channels: conda-forge
+          miniforge-variant: Mambaforge
+          miniforge-version: latest
+          python-version: ${{ matrix.pyversion }}
+
+      - name: Install dependencies with conda
+        shell: bash -l {0}
+        run: mamba install -c conda-forge "cosmosis==3.9.2" cosmosis-build-standard-library pytest
+      
+      - name: Get Cached Planck
+        uses: actions/cache/restore@v3
+        with:
+          path: COM_Likelihood_Data-baseline_R3.00.tar.gz
+          key: planck-2018-data
+          fail-on-cache-miss: true
+
+      - name: Get Cached WMAP
+        uses: actions/cache/restore@v3
+        with:
+          path: wmap_likelihood_full_v5.tar.gz
+          key: wmap-9-data
+          fail-on-cache-miss: true
+
+      - name: Get Cached ACT
+        uses: actions/cache/restore@v3
+        with:
+          path: ACT_dr6_likelihood_v1.1.tgz
+          key: act-dr6-data
+          fail-on-cache-miss: true
+          
+      - name: Extract data
+        shell: bash -l {0}
+        run: |
+          # WMAP
+          pushd likelihood/wmap9/data
+          tar -zxvf ../../../wmap_likelihood_full_v5.tar.gz
+          mv wmap_likelihood_v5/data/* .
+          popd
+          #Planck
+          pushd likelihood/planck2018
+          tar -zxvf ../../COM_Likelihood_Data-baseline_R3.00.tar.gz
+          popd
+          # ACT
+          mkdir likelihood/act-dr6-lens/data
+          pushd likelihood/act-dr6-lens/data
+          tar -zxvf ../../../ACT_dr6_likelihood_v1.1.tgz
+          popd
+
+      - name: Build standard library
+        shell: bash -l {0}
+        run: |
+          source cosmosis-configure
+          make
+
+      - name: Install likelihood python dependencies from pip
+        shell: bash -l {0}
+        run: |
+          pip install "act_dr6_lenslike>=1.0.2" "git+https://github.com/carronj/planck_PR4_lensing"
+
+      # Not working - don't know why
+      # - name: Install recent python dependencies
+      #   if:  ${{ (matrix.pyversion != '3.7') && (matrix.pyversion != '3.8') }}
+      #   run: |
+      #       pip install "candl-like"
+    
+      - name: Run Tests
+        shell: bash -l {0}
+        run: |
+          source cosmosis-configure
+          pytest -vv --durations=0 tests/test_cosmosis_standard_library.py
+
+      - name: Run Demos
+        shell: bash -l {0}
+        run: |
+          source cosmosis-configure
+          pytest -vv --durations=0 tests/test_demos.py
+
+
+
+  apt-get-test:
+    runs-on: ubuntu-20.04
+    needs: Download_Data
+    strategy:
+      matrix:
+        python-version: [3.7, 3.8, 3.9, "3.10", "3.11", "3.12"]
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      with:
+        submodules: true
+
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Install apt dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get -y install gfortran-7 swig libopenmpi-dev openmpi-bin libopenblas-dev
+        sudo ln -s `which gfortran-7` /usr/local/bin/gfortran
+        sudo apt-get -y install libgsl-dev libfftw3-bin libfftw3-dev libfftw3-3 autotools-dev  autoconf libcfitsio-dev
+
+
+    - name: Get Cached Planck
+      uses: actions/cache/restore@v3
+      with:
+        path: COM_Likelihood_Data-baseline_R3.00.tar.gz
+        key: planck-2018-data
+        fail-on-cache-miss: true
+
+    - name: Get Cached WMAP
+      uses: actions/cache/restore@v3
+      with:
+        path: wmap_likelihood_full_v5.tar.gz
+        key: wmap-9-data
+        fail-on-cache-miss: true
+        
+    - name: Get Cached ACT
+      uses: actions/cache/restore@v3
+      with:
+        path: ACT_dr6_likelihood_v1.1.tgz
+        key: act-dr6-data
+        fail-on-cache-miss: true
+    
+    - name: Extract data
+      shell: bash -l {0}
+      run: |
+        # WMAP
+        pushd likelihood/wmap9/data
+        tar -zxvf ../../../wmap_likelihood_full_v5.tar.gz
+        mv wmap_likelihood_v5/data/* .
+        popd
+        #Planck
+        pushd likelihood/planck2018
+        tar -zxvf ../../COM_Likelihood_Data-baseline_R3.00.tar.gz
+        popd
+        # ACT
+        mkdir likelihood/act-dr6-lens/data
+        pushd likelihood/act-dr6-lens/data
+        tar -zxvf ../../../ACT_dr6_likelihood_v1.1.tgz
+        popd
+  
+
+    - uses: actions/cache@v2
+      name: Load pip cache
+      id: cache-pip
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ matrix.python-version }}-${{ hashFiles('**/setup.py') }}-v2
+
+
+    - name: Install python dependencies
+      run: |
+        python -m pip install --upgrade pip wheel setuptools
+        pip install "cosmosis==3.9.2" "nautilus-sampler==1.0.1" "scipy<1.14"
+        pip install -v --no-cache-dir --no-binary=mpi4py,camb mpi4py camb
+        pip install fitsio astropy fast-pt "Cython>=3.0" jupyter sacc "act_dr6_lenslike>=1.0.2" "git+https://github.com/carronj/planck_PR4_lensing"
+    
+    - name: Install recent python dependencies
+      if:  ${{ (matrix.python-version != '3.7') && (matrix.python-version != '3.8') }}
+      run: |
+        pip install "candl-like"
+        
+
+    - name: Build
+      run: |
+        source .github/ci-setup.sh && make
+
+
+    # I have seen some failures here
+    - name: Check camb installation
+      run: |
+        source .github/ci-setup.sh
+        python -c "import camb"
+
+    - name: Test campaign commands
+      shell: bash -l {0}
+      run: |
+        source .github/ci-setup.sh
+        cosmosis-campaign -l examples/des-campaign.yml | tee output/campaign.log
+        grep -e "mira-titan" campaign.log
+        grep -e "fiducial" campaign.log
+        cosmosis-campaign --run fiducial-test-only examples/des-campaign.yml
+        cosmosis-campaign  examples/des-campaign.yml --status fiducial-test-only > output/campaign.log
+        grep -e "🟢 fiducial-test-only" output/campaign.log
+        cosmosis-campaign  examples/des-campaign.yml --status
+
+    - name: ExampleNotebook
+      shell: bash -l {0}
+      run: |
+        source cosmosis-configure
+        rm -f output/pantheon.txt
+        jupyter nbconvert --to notebook --execute "examples/example.ipynb"
